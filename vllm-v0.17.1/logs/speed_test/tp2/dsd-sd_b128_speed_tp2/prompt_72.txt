@@ -1,0 +1,10 @@
+MBPP sample index: 72
+task_id: 131
+
+Task:
+Write a python function to reverse only the vowels of a given string (where y is not a vowel).
+
+Tests:
+['assert reverse_vowels("Python") == "Python"'
+ 'assert reverse_vowels("USA") == "ASU"'
+ 'assert reverse_vowels("ab") == "ab"']

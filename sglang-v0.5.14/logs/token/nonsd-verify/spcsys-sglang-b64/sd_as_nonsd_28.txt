@@ -1,0 +1,37 @@
+A **tetrahedral number** is a figurate number that represents a tetrahedron. The nth tetrahedral number is the sum of the first n triangular numbers.
+
+The formula for the nth tetrahedral number is:
+
+$$
+T_n = \frac{n(n+1)(n+2)}{6}
+$$
+
+Here's a Python function to compute the nth tetrahedral number:
+
+```python
+def tetrahedral_number(n):
+    """
+    Returns the nth tetrahedral number.
+    
+    Parameters:
+    n (int): The position in the sequence of tetrahedral numbers.
+    
+    Returns:
+    int: The nth tetrahedral number.
+    """
+    if n < 0:
+        raise ValueError("n must be a non-negative integer.")
+    return n * (n + 1) * (n + 2) // 6
+```
+
+### Example usage:
+
+```python
+print(tetrahedral_number(0))  # Output: 0
+print(tetrahedral_number(1))  # Output: 1
+print(tetrahedral_number(2))  # Output: 4
+print(tetrahedral_number(3))  # Output: 10
+print(tetrahedral_number(4))  # Output: 20
+```
+
+Let me know if you'd like a version that computes it iteratively or using recursion!

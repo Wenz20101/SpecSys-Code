@@ -1,0 +1,9 @@
+MBPP sample index: 106
+task_id: 234
+
+Task:
+Write a function to find the volume of a cube given its side length.
+
+Tests:
+['assert volume_cube(3)==27' 'assert volume_cube(2)==8'
+ 'assert volume_cube(5)==125']

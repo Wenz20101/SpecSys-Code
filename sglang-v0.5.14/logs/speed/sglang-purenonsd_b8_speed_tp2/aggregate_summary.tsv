@@ -1,0 +1,2 @@
+label	num_runs	batch_size	total_ok	total_failed	mean_batch_wall_s	mean_avg_jct_s	mean_p50_jct_s	mean_p90_jct_s	mean_p95_jct_s	mean_throughput_jobs_per_s	pooled_avg_jct_s	overall_throughput_jobs_per_s
+sglang-purenonsd	5	8	40	0	9.329807	6.091875	5.264499	9.325660	9.325660	0.857471	6.091875	0.857467

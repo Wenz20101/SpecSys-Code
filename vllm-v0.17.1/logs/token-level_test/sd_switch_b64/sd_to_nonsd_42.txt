@@ -1,0 +1,36 @@
+Here's a Python function that solves the given MBPP (Microsoft Basic Python Problems) task: finding the length of the smallest list in a list of lists.
+
+```python
+def Find_Min_Length(list_of_lists):
+    """
+    Find the length of the smallest list in a list of lists.
+
+    Parameters:
+    list_of_lists (list of lists): A list containing multiple lists.
+
+    Returns:
+    int: The length of the smallest list.
+    """
+    if not list_of_lists:
+        return 0  # Return 0 if the input is empty
+
+    min_length = float('inf')
+    for lst in list_of_lists:
+        if len(lst) < min_length:
+            min_length = len(lst)
+    return min_length
+```
+
+### Example Usage:
+
+```python
+print(Find_Min_Length([[1], [1, 2]]))  # Output: 1
+print(Find_Min_Length([[1, 2], [1, 2, 3], [1, 2, 3, 4]]))  # Output: 2
+print(Find_Min_Length([[3, 3, 3], [4, 4, 4, 4]]))  # Output: 3
+```
+
+### Notes:
+- The function handles the case where the input list is empty by returning `0`.
+- It iterates through each sublist and keeps track of the minimum length found.
+
+This function should pass all the provided test cases.

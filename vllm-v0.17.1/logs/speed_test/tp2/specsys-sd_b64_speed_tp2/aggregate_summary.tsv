@@ -1,0 +1,2 @@
+label	num_runs	batch_size	total_ok	total_failed	mean_batch_wall_s	mean_avg_jct_s	mean_p50_jct_s	mean_p90_jct_s	mean_p95_jct_s	mean_throughput_jobs_per_s	pooled_avg_jct_s	overall_throughput_jobs_per_s
+specsys-sd	5	64	320	0	13.654326	10.218481	10.459803	12.846576	13.128555	4.688259	10.218481	4.687159

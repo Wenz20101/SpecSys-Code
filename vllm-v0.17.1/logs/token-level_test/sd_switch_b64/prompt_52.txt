@@ -1,0 +1,9 @@
+MBPP sample index: 52
+task_id: 105
+
+Task:
+Write a python function to count true booleans in the given list.
+
+Tests:
+['assert count([True,False,True]) == 2' 'assert count([False,False]) == 0'
+ 'assert count([True,True,True]) == 3']

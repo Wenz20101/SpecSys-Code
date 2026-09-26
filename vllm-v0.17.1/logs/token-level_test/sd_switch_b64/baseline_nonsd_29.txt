@@ -1,0 +1,40 @@
+Here's a Python function to calculate the **volume of a sphere**, along with the necessary imports and test cases:
+
+### ✅ Formula:
+The volume $ V $ of a sphere with radius $ r $ is given by:
+
+$$
+V = \frac{4}{3} \pi r^3
+$$
+
+### ✅ Python Code:
+
+```python
+import math
+
+def volume_sphere(radius):
+    """
+    Calculate the volume of a sphere given its radius.
+    
+    Parameters:
+    radius (float): The radius of the sphere.
+    
+    Returns:
+    float: The volume of the sphere.
+    """
+    return (4.0 / 3.0) * math.pi * (radius ** 3)
+
+# Test cases
+import math
+
+assert math.isclose(volume_sphere(10), 4188.790204786391, rel_tol=0.001)
+assert math.isclose(volume_sphere(25), 65449.84694978735, rel_tol=0.001)
+assert math.isclose(volume_sphere(20), 33510.32163829113, rel_tol=0.001)
+```
+
+### 🔍 Explanation:
+- `math.pi` provides the value of π.
+- The function uses the formula $ \frac{4}{3} \pi r^3 $.
+- `math.isclose()` is used to compare floating-point numbers with a relative tolerance to handle precision issues.
+
+Let me know if you want this wrapped in a class or with error handling for invalid inputs!

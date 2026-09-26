@@ -1,0 +1,10 @@
+MBPP sample index: 3
+task_id: 16
+
+Task:
+Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.
+
+Tests:
+['assert text_lowercase_underscore("aab_cbbbc")==(True)'
+ 'assert text_lowercase_underscore("aab_Abbbc")==(False)'
+ 'assert text_lowercase_underscore("Aaab_abbbc")==(False)']

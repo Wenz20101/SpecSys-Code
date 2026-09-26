@@ -1,0 +1,35 @@
+A **centered hexagonal number** (also known as a **hex number**) is a figurate number that represents a hexagon with a dot in the center and all other dots surrounding the center in a hexagonal lattice.
+
+The formula for the **nth centered hexagonal number** is:
+
+$$
+H(n) = 3n(n - 1) + 1
+$$
+
+Here's the Python function that implements this formula:
+
+```python
+def centered_hexagonal_number(n):
+    """
+    Returns the nth centered hexagonal number.
+    
+    Formula: H(n) = 3n(n - 1) + 1
+    
+    Parameters:
+    n (int): The position in the sequence of centered hexagonal numbers.
+    
+    Returns:
+    int: The nth centered hexagonal number.
+    """
+    return 3 * n * (n - 1) + 1
+```
+
+### Example usage and tests:
+
+```python
+assert centered_hexagonal_number(10) == 271
+assert centered_hexagonal_number(2) == 7
+assert centered_hexagonal_number(9) == 217
+```
+
+These assertions will pass, confirming the correctness of the function.

@@ -1,0 +1,27 @@
+Sure! Here's a Python function that removes characters from the first string that are present in the second string:
+
+```python
+def remove_chars_from_first(string1, string2):
+    # Create a set of characters from the second string for fast lookup
+    chars_to_remove = set(string2)
+    
+    # Use a list comprehension to filter out characters in string1 that are in chars_to_remove
+    result = ''.join([char for char in string1 if char not in chars_to_remove])
+    
+    return result
+```
+
+### Example usage:
+
+```python
+s1 = "hello world"
+s2 = "lo"
+
+print(remove_chars_from_first(s1, s2))  # Output: "he wrd"
+```
+
+### Explanation:
+- `set(string2)` is used for efficient lookup (O(1) average time complexity).
+- The list comprehension iterates over each character in `string1` and includes it in the result only if it is **not** in `chars_to_remove`.
+
+Let me know if you want a version that handles Unicode or case sensitivity!

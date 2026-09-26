@@ -1,0 +1,32 @@
+Here's a Python function that solves the MBPP task of finding the `kth` element in a given array using **1-based indexing**:
+
+```python
+def kth_element(arr, k):
+    """
+    Returns the kth element in the array using 1-based indexing.
+    
+    Parameters:
+    arr (list): The input list.
+    k (int): The position (1-based) of the element to retrieve.
+    
+    Returns:
+    Any: The kth element of the array.
+    """
+    if k < 1 or k > len(arr):
+        raise IndexError("Index out of range")
+    return arr[k - 1]
+```
+
+### Example Usage:
+
+```python
+# Test cases
+assert kth_element([12, 3, 5, 7, 19], 2) == 3
+assert kth_element([17, 24, 8, 23], 3) == 8
+assert kth_element([16, 21, 25, 36, 4], 4) == 36
+```
+
+### Explanation:
+- The function takes a list `arr` and an integer `k`.
+- Since Python uses **0-based indexing**, we subtract 1 from `k` to get the correct index.
+- It also includes a check to ensure `k` is within the valid range (1 to `len(arr)`), raising an `IndexError` if not.

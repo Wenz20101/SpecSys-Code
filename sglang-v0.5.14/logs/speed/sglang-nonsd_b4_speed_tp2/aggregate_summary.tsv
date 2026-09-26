@@ -1,0 +1,2 @@
+label	num_runs	batch_size	total_ok	total_failed	mean_batch_wall_s	mean_avg_jct_s	mean_p50_jct_s	mean_p90_jct_s	mean_p95_jct_s	mean_throughput_jobs_per_s	pooled_avg_jct_s	overall_throughput_jobs_per_s
+sglang-nonsd	5	4	20	0	8.229010	6.678382	6.144873	8.228712	8.228712	0.486108	6.678382	0.486085

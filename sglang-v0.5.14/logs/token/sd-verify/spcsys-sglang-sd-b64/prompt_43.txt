@@ -1,0 +1,4 @@
+sample_index: 43
+task_id: 96
+
+Write a python function to find the number of divisors of a given integer.

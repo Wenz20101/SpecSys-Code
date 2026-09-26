@@ -1,0 +1,2 @@
+label	num_runs	batch_size	total_ok	total_failed	mean_batch_wall_s	mean_avg_jct_s	mean_p50_jct_s	mean_p90_jct_s	mean_p95_jct_s	mean_throughput_jobs_per_s	pooled_avg_jct_s	overall_throughput_jobs_per_s
+asd-pure-nonsd	5	16	80	0	10.260791	6.857474	5.976819	9.465327	10.257805	1.559585	6.857474	1.559334

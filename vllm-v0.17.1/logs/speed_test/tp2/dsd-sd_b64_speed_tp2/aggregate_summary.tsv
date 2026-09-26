@@ -1,0 +1,2 @@
+label	num_runs	batch_size	total_ok	total_failed	mean_batch_wall_s	mean_avg_jct_s	mean_p50_jct_s	mean_p90_jct_s	mean_p95_jct_s	mean_throughput_jobs_per_s	pooled_avg_jct_s	overall_throughput_jobs_per_s
+dsd-sd	5	64	320	0	14.568693	10.593425	10.767537	13.242662	13.666608	4.403829	10.593425	4.392982

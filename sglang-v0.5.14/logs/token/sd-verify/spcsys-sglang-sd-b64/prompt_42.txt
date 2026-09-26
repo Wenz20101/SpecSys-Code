@@ -1,0 +1,4 @@
+sample_index: 42
+task_id: 95
+
+Write a python function to find the length of the smallest list in a list of lists.

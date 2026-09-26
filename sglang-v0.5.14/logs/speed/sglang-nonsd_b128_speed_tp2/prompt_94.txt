@@ -1,0 +1,10 @@
+MBPP sample index: 94
+task_id: 171
+
+Task:
+Write a function to find the perimeter of a regular pentagon from the length of its sides.
+
+Tests:
+['assert perimeter_pentagon(5) == 25'
+ 'assert perimeter_pentagon(10) == 50'
+ 'assert perimeter_pentagon(15) == 75']

@@ -1,0 +1,4 @@
+sample_index: 48
+task_id: 101
+
+Write a function to find the kth element in the given array using 1-based indexing.

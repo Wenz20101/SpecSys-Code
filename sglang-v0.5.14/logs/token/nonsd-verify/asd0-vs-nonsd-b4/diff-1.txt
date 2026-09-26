@@ -1,0 +1,12 @@
+--- /home/user/vllm/logs/toggle-consistency-batch-20260729-154817/asd0_1.txt	2026-07-29 15:48:36.341258272 +0800
++++ /home/user/vllm/logs/toggle-consistency-batch-20260729-154817/nonsd_1.txt	2026-07-29 15:48:52.245258654 +0800
+@@ -39,4 +39,6 @@
+ ### Explanation:
+ - The function uses Python's built-in `sorted()` function.
+ - The `key` parameter is set to `lambda row: sum(row)`, which tells Python to sort the rows based on their sum.
+-- The original matrix is not modified; a new sorted matrix is returned.
+\ No newline at end of file
++- The original matrix is not modified; a new sorted matrix is returned.
++
++Let me know if you want to sort in descending order or modify the matrix in place!
+\ No newline at end of file

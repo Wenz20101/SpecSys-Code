@@ -1,0 +1,36 @@
+Here's a Python function that takes a list of tuples and an integer `k`, and returns a new list of tuples where **all elements in each tuple are divisible by `k`**:
+
+```python
+def filter_tuples_divisible_by_k(tuples_list, k):
+    """
+    Filters tuples from the list where all elements are divisible by k.
+
+    Parameters:
+    tuples_list (list of tuples): The list of tuples to filter.
+    k (int): The divisor to check divisibility against.
+
+    Returns:
+    list of tuples: A list of tuples where all elements are divisible by k.
+    """
+    return [t for t in tuples_list if all(x % k == 0 for x in t)]
+```
+
+### Example Usage:
+
+```python
+tuples = [(2, 4, 6), (3, 6, 9), (1, 2, 3), (4, 8, 12), (5, 10, 15)]
+k = 2
+
+result = filter_tuples_divisible_by_k(tuples, k)
+print(result)
+```
+
+### Output:
+```
+[(2, 4, 6), (4, 8, 12)]
+```
+
+### Explanation:
+- The function uses a list comprehension.
+- `all(x % k == 0 for x in t)` checks if **all elements** in the tuple `t` are divisible by `k`.
+- Only tuples that satisfy this condition are included in the result.

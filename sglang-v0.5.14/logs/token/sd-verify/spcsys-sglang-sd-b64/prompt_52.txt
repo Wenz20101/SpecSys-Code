@@ -1,0 +1,4 @@
+sample_index: 52
+task_id: 105
+
+Write a python function to count true booleans in the given list.

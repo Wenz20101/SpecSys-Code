@@ -1,0 +1,48 @@
+The **Newman-Conway Sequence** is a sequence defined by the recurrence relation:
+
+$$
+P(n) = P(P(n-1)) + P(n - P(n-1))
+$$
+
+with the base cases:
+
+$$
+P(1) = 1, \quad P(2) = 1
+$$
+
+This sequence is also known as the **"Conway's sequence"** or **"Newman-Conway sequence"**.
+
+Here's a Python function to compute the **nth number** in the Newman-Conway sequence using **memoization** for efficiency:
+
+```python
+def newman_conway(n):
+    if n < 1:
+        raise ValueError("Input must be a positive integer.")
+    
+    # Base cases
+    if n == 1 or n == 2:
+        return 1
+    
+    # Initialize memoization list
+    memo = [0] * (n + 1)
+    memo[1] = 1
+    memo[2] = 1
+
+    for i in range(3, n + 1):
+        memo[i] = memo[memo[i - 1]] + memo[i - memo[i - 1]]
+    
+    return memo[n]
+```
+
+### Example Usage:
+
+```python
+print(newman_conway(10))  # Output: 6
+```
+
+### Explanation:
+
+- `newman_conway(10)` returns the 10th number in the sequence.
+- The sequence starts as: `1, 1, 2, 2, 3, 4, 4, 4, 5, 6, ...`
+
+Let me know if you'd like a version that supports dynamic computation for large `n` or with memoization outside the function.

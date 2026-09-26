@@ -1,0 +1,27 @@
+Here's a Python function that multiplies all the numbers in a list and then divides the result by the length of the list:
+
+```python
+def multiply_and_divide(numbers):
+    if not numbers:
+        raise ValueError("The list is empty.")
+    
+    product = 1
+    for num in numbers:
+        product *= num
+    
+    result = product / len(numbers)
+    return result
+```
+
+### Example usage:
+
+```python
+nums = [2, 3, 4]
+result = multiply_and_divide(nums)
+print(result)  # Output: 24.0 (because 2*3*4 = 24, and 24 / 3 = 8.0)
+```
+
+### Notes:
+- The function checks if the list is empty and raises a `ValueError` to avoid division by zero.
+- It uses a loop to compute the product of all elements.
+- Finally, it divides the product by the length of the list and returns the result as a float.

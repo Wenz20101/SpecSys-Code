@@ -1,0 +1,35 @@
+Sure! Here's a simple Python function to find the smallest number in a list:
+
+```python
+def find_smallest_number(numbers):
+    if not numbers:
+        return None  # Return None if the list is empty
+    smallest = numbers[0]
+    for num in numbers:
+        if num < smallest:
+            smallest = num
+    return smallest
+```
+
+### Example usage:
+
+```python
+my_list = [34, 1, 56, 23, 78, 0]
+print("Smallest number:", find_smallest_number(my_list))
+```
+
+### Output:
+```
+Smallest number: 0
+```
+
+### Notes:
+- This function handles an empty list by returning `None`.
+- You can also use the built-in `min()` function for a more concise solution:
+
+```python
+def find_smallest_number(numbers):
+    return min(numbers) if numbers else None
+```
+
+Let me know if you'd like to handle other edge cases or data types!

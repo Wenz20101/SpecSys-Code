@@ -1,0 +1,10 @@
+MBPP sample index: 64
+task_id: 123
+
+Task:
+Write a function to sum all amicable numbers from 1 to a specified number.
+
+Tests:
+['assert amicable_numbers_sum(999)==504'
+ 'assert amicable_numbers_sum(9999)==31626'
+ 'assert amicable_numbers_sum(99)==0']

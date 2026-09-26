@@ -1,0 +1,4 @@
+sample_index: 60
+task_id: 117
+
+Write a function to convert all possible convertible elements in a list of lists to floats.

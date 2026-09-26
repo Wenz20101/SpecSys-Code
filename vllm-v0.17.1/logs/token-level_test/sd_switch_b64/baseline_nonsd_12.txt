@@ -1,0 +1,28 @@
+To solve this problem, we need to count the number of **substrings** in a given string such that the **sum of the digits** in the substring is **equal to the length** of the substring.
+
+### Key Observations:
+- A substring is a contiguous sequence of characters within the string.
+- For a substring of length `L`, the sum of its digits must be equal to `L`.
+
+### Example:
+For the string `'112112'`, the substrings that satisfy the condition are:
+- `'1'` (sum = 1, length = 1)
+- `'1'` (sum = 1, length = 1)
+- `'2'` (sum = 2, length = 1) → ❌
+- `'1'` (sum = 1, length = 1)
+- `'1'` (sum = 1, length = 1)
+- `'1'` (sum = 1, length = 1)
+- `'11'` (sum = 2, length = 2)
+- `'12'` (sum = 3, length = 2) → ❌
+- `'21'` (sum = 3, length = 2) → ❌
+- `'112'` (sum = 4, length = 3) → ❌
+- `'121'` (sum = 4, length = 3) → ❌
+- `'211'` (sum = 4, length = 3) → ❌
+- `'1121'` (sum = 5, length = 4) → ❌
+- `'1211'` (sum = 5, length = 4) → ❌
+- `'2112'` (sum = 6, length = 4) → ❌
+- `'11211'` (sum = 6, length = 5) → ❌
+- `'12112'` (sum = 7, length = 5) → ❌
+- `'112112'` (sum = 7, length = 6) → ❌
+
+So, the valid substrings are: `'1'`, `'1'`, `'1'`, `'1'`, `'1'`, `'11'` → total of **6**

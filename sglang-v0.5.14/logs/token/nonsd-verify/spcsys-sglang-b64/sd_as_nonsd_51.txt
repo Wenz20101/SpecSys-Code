@@ -1,0 +1,36 @@
+Sure! Here's a Python function that sorts each sublist of strings in a given list of lists:
+
+```python
+def sort_sublists(list_of_lists):
+    """
+    Sorts each sublist of strings in a given list of lists.
+
+    Parameters:
+    list_of_lists (list of list of str): A list containing sublists of strings.
+
+    Returns:
+    list of list of str: A new list where each sublist is sorted.
+    """
+    return [sorted(sublist) for sublist in list_of_lists]
+```
+
+### Example Usage:
+
+```python
+data = [
+    ["banana", "apple", "cherry"],
+    ["dog", "cat", "bird"],
+    ["zebra", "elephant", "ant"]
+]
+
+sorted_data = sort_sublists(data)
+print(sorted_data)
+```
+
+### Output:
+
+```
+[['apple', 'banana', 'cherry'], ['bird', 'cat', 'dog'], ['ant', 'elephant', 'zebra']]
+```
+
+This function uses a list comprehension to iterate over each sublist and apply the `sorted()` function to it, returning a new list of sorted sublists.

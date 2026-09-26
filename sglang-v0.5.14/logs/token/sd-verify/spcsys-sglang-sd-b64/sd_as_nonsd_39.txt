@@ -1,0 +1,56 @@
+An **undulating number** is a number that has the form of alternating digits, such as `1212`, `121`, `12121`, etc. In other words, the digits alternate between two different values.
+
+### Example:
+- `1212` → undulating (alternates between 1 and 2)
+- `123` → not undulating
+- `111` → not undulating (all digits are the same)
+- `12121` → undulating
+
+### Rules:
+- The number must have at least 3 digits.
+- The digits must alternate between two different digits.
+
+---
+
+### ✅ Python Function to Check if a Number is Undulating
+
+```python
+def is_undulating(n):
+    n = str(n)
+    if len(n) < 3:
+        return False  # Undulating numbers must have at least 3 digits
+
+    # Check if all digits alternate between two different values
+    first = n[0]
+    second = n[1]
+
+    if first == second:
+        return False  # Not undulating if first two digits are the same
+
+    for i in range(2, len(n)):
+        if i % 2 == 0:
+            if n[i] != first:
+                return False
+        else:
+            if n[i] != second:
+                return False
+
+    return True
+```
+
+---
+
+### ✅ Example Usage:
+
+```python
+print(is_undulating(1212))   # True
+print(is_undulating(12121))  # True
+print(is_undulating(123))    # False
+print(is_undulating(111))    # False
+print(is_undulating(12))     # False (too short)
+print(is_undulating(121))    # True
+```
+
+---
+
+Let me know if you want a version that works with numbers in different bases or with additional constraints!

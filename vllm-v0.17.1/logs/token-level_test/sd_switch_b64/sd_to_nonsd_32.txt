@@ -1,0 +1,32 @@
+Here's a Python function to calculate the **surface area of a sphere**, along with the necessary import and test cases:
+
+```python
+import math
+
+def surfacearea_sphere(radius):
+    """
+    Calculate the surface area of a sphere given its radius.
+    
+    Parameters:
+    radius (float): The radius of the sphere.
+    
+    Returns:
+    float: The surface area of the sphere.
+    """
+    return 4 * math.pi * (radius ** 2)
+
+# Test cases
+import math
+
+assert math.isclose(surfacearea_sphere(10), 1256.6370614359173, rel_tol=0.001)
+assert math.isclose(surfacearea_sphere(15), 2827.4333882308138, rel_tol=0.001)
+assert math.isclose(surfacearea_sphere(20), 5026.548245743669, rel_tol=0.001)
+```
+
+### Explanation:
+- The formula for the **surface area of a sphere** is:  
+  $$
+  A = 4\pi r^2
+  $$
+- The function `surfacearea_sphere` takes a `radius` as input and returns the surface area.
+- The `math.isclose` function is used to compare floating-point numbers with a relative tolerance to handle precision issues.

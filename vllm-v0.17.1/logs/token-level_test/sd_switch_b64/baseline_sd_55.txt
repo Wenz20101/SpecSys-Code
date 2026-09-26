@@ -1,0 +1,48 @@
+To solve this problem, we need to understand what it means for a binary string to have an "odd equivalent" when rotated a certain number of times.
+
+### Problem Breakdown:
+
+- A **binary string** consists of only `'0'` and `'1'`.
+- A **rotation** of a binary string moves the first character to the end.
+- For each rotation, we convert the rotated string to a **decimal number** and check if it is **odd**.
+- We are to count how many of these rotated numbers are **odd** after a given number of rotations.
+
+### Key Insight:
+
+- A number is **odd** if its **last digit is 1**.
+- When you rotate a binary string, the **last digit** of the rotated string is the **first digit** of the original string.
+- So, for a binary string `s`, the number of rotations that result in an **odd number** is equal to the number of times the **first character** of the string is `'1'`.
+
+### Why?
+
+Because:
+- After each rotation, the **last digit** of the rotated string is the **first digit** of the original string.
+- So, if the first digit is `'1'`, then the rotated number will be **odd**.
+- If the first digit is `'0'`, the rotated number will be **even**.
+
+### Therefore:
+
+- The number of odd numbers after `n` rotations is simply the number of times the **first character** of the string is `'1'` in the first `n` rotations.
+
+But since the string is rotated `n` times, and the string is of length `L`, the **first character** will be `'1'` in every rotation where the original string's character at position `(i % L)` is `'1'`, for `i` from `0` to `n-1`.
+
+### Final Approach:
+
+- Count how many times the character `'1'` appears in the first `n` rotations.
+- Since the string is rotated, the characters that appear as the first character in the rotated string are the characters of the original string in a cyclic manner.
+
+### Python Function:
+
+```python
+def odd_Equivalent(s, n):
+    length = len(s)
+    count = 0
+    for i in range(n):
+        if s[i % length] == '1':
+            count += 1
+    return count
+```
+
+### Explanation:
+
+- `i % length` gives the index

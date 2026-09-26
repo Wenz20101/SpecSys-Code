@@ -1,0 +1,30 @@
+You can check whether two integers have opposite signs by using the multiplication operator. If the product of the two integers is negative, then they have opposite signs.
+
+Here's a Python function to do that:
+
+```python
+def have_opposite_signs(a, b):
+    """
+    Check if two integers have opposite signs.
+
+    Parameters:
+    a (int): First integer
+    b (int): Second integer
+
+    Returns:
+    bool: True if the integers have opposite signs, False otherwise
+    """
+    return (a * b) < 0
+```
+
+### Example usage:
+
+```python
+print(have_opposite_signs(5, -3))  # Output: True
+print(have_opposite_signs(-4, -2)) # Output: False
+print(have_opposite_signs(0, 5))   # Output: False
+```
+
+### Explanation:
+- If `a` and `b` have opposite signs, their product will be negative.
+- If either of them is zero, the product will be zero, so the function returns `False` (since 0 is not less than 0).

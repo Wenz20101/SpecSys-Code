@@ -1,0 +1,4 @@
+sample_index: 27
+task_id: 79
+
+Write a python function to check whether the length of the word is odd or not.

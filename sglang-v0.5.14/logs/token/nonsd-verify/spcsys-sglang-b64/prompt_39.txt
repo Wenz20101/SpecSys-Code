@@ -1,0 +1,4 @@
+sample_index: 39
+task_id: 92
+
+Write a function to check whether the given number is undulating or not.

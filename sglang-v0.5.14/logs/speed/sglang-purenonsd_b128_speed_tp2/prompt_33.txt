@@ -1,0 +1,10 @@
+MBPP sample index: 33
+task_id: 86
+
+Task:
+Write a function to find nth centered hexagonal number.
+
+Tests:
+['assert centered_hexagonal_number(10) == 271'
+ 'assert centered_hexagonal_number(2) == 7'
+ 'assert centered_hexagonal_number(9) == 217']

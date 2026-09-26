@@ -1,0 +1,27 @@
+Here's a Python function that sorts a list of tuples based on the **second value** of each tuple, as required by the MBPP task:
+
+```python
+def subject_marks(subjects):
+    """
+    Sorts a list of tuples by the second value (marks) in ascending order.
+
+    Parameters:
+    subjects (list): A list of tuples where each tuple contains a subject name and a mark.
+
+    Returns:
+    list: A new list of tuples sorted by the second element (marks) in ascending order.
+    """
+    return sorted(subjects, key=lambda x: x[1])
+```
+
+### Explanation:
+- The `sorted()` function is used to sort the list.
+- The `key=lambda x: x[1]` tells Python to sort based on the second element of each tuple (i.e., the marks).
+
+### Example usage:
+```python
+print(subject_marks([('English', 88), ('Science', 90), ('Maths', 97), ('Social sciences', 82)]))
+# Output: [('Social sciences', 82), ('English', 88), ('Science', 90), ('Maths', 97)]
+```
+
+This function will pass all the provided test cases.

@@ -1,0 +1,9 @@
+MBPP sample index: 36
+task_id: 89
+
+Task:
+Write a function to find the closest smaller number than n.
+
+Tests:
+['assert closest_num(11) == 10' 'assert closest_num(7) == 6'
+ 'assert closest_num(12) == 11']

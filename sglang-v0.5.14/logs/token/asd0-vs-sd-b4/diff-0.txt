@@ -1,0 +1,16 @@
+--- /home/user/vllm/logs/toggle-consistency-batch-20260729-155637/asd0_0.txt	2026-07-29 15:56:55.741270263 +0800
++++ /home/user/vllm/logs/toggle-consistency-batch-20260729-155637/sd_0.txt	2026-07-29 15:57:06.225270515 +0800
+@@ -21,10 +21,9 @@
+ ### Example usage:
+ 
+ ```python
+-text = "hello world, hello"
+-char = 'l'
+-result = remove_first_last_occurrence(text, char)
+-print(result)  # Output: "heo world, heo"
++print(remove_first_last_occurrence("hello world", "l"))  # Output: "heo world"
++print(remove_first_last_occurrence("banana", "a"))        # Output: "bann"
++print(remove_first_last_occurrence("python", "x"))        # Output: "python" (char not found)
+ ```
+ 
+ ### Explanation:

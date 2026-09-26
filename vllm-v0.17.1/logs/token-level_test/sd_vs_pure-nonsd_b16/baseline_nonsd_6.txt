@@ -1,0 +1,30 @@
+You can solve this problem by checking if the length of the array is different from the length of a set created from the array. Since sets automatically remove duplicates, if the lengths are different, it means there were duplicates in the original array.
+
+Here's a Python function to do that:
+
+```python
+def has_duplicate(arr):
+    """
+    Check if the given array contains any duplicate elements.
+
+    Parameters:
+    arr (list): A list of integers.
+
+    Returns:
+    bool: True if there are duplicates, False otherwise.
+    """
+    return len(arr) != len(set(arr))
+```
+
+### Example usage:
+
+```python
+print(has_duplicate([1, 2, 3, 4, 5]))  # Output: False
+print(has_duplicate([1, 2, 3, 2, 4]))  # Output: True
+```
+
+### Explanation:
+- `set(arr)` removes all duplicates.
+- If the length of the original list is greater than the length of the set, it means there were duplicates.
+
+Let me know if you want a version that returns the duplicate elements or uses a different method (like a hash map or two pointers).

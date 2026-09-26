@@ -1,0 +1,4 @@
+sample_index: 4
+task_id: 17
+
+Write a function that returns the perimeter of a square given its side length as input.

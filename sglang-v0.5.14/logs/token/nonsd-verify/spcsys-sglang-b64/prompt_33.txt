@@ -1,0 +1,4 @@
+sample_index: 33
+task_id: 86
+
+Write a function to find nth centered hexagonal number.

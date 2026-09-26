@@ -1,0 +1,4 @@
+sample_index: 8
+task_id: 56
+
+Write a python function to check if a given number is one less than twice its reverse.

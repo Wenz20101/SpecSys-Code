@@ -1,0 +1,34 @@
+To determine whether a number is a **woodball number**, we first need to understand what a **woodball number** is. Since this term is not a standard mathematical term, I'll assume a definition based on a common pattern or logic that might be associated with the term.
+
+### Assumption:
+Let's define a **woodball number** as a number that is **divisible by 3 and 5**, i.e., divisible by **15**.
+
+If that's the case, here's a Python function to check if a number is a woodball number:
+
+```python
+def is_woodball_number(n):
+    """
+    Check if the given number is a woodball number.
+    A woodball number is defined as a number divisible by both 3 and 5 (i.e., divisible by 15).
+    
+    Parameters:
+    n (int): The number to check.
+    
+    Returns:
+    bool: True if the number is a woodball number, False otherwise.
+    """
+    return n % 15 == 0
+```
+
+### Example usage:
+
+```python
+print(is_woodball_number(15))   # True
+print(is_woodball_number(30))   # True
+print(is_woodball_number(45))   # True
+print(is_woodball_number(10))   # False
+print(is_woodball_number(5))    # False
+```
+
+### Note:
+If you had a different definition of a "woodball number" in mind, please clarify, and I can adjust the function accordingly.

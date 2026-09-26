@@ -1,0 +1,9 @@
+MBPP sample index: 27
+task_id: 79
+
+Task:
+Write a python function to check whether the length of the word is odd or not.
+
+Tests:
+['assert word_len("Hadoop") == False' 'assert word_len("great") == True'
+ 'assert word_len("structure") == True']

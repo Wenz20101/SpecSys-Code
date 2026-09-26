@@ -1,0 +1,27 @@
+Sure! Here's a simple Python function that checks whether the length of a given word is **odd** or **even**:
+
+```python
+def is_length_odd(word):
+    """
+    Check if the length of the given word is odd.
+
+    Parameters:
+    word (str): The input word to check.
+
+    Returns:
+    bool: True if the length is odd, False otherwise.
+    """
+    return len(word) % 2 != 0
+```
+
+### Example usage:
+
+```python
+print(is_length_odd("hello"))  # Output: True (length is 5, which is odd)
+print(is_length_odd("apple"))  # Output: True (length is 5)
+print(is_length_odd("cat"))    # Output: True (length is 3)
+print(is_length_odd("dog"))    # Output: True (length is 3)
+print(is_length_odd("test"))   # Output: False (length is 4)
+```
+
+Let me know if you want to extend this to check multiple words or handle other cases!

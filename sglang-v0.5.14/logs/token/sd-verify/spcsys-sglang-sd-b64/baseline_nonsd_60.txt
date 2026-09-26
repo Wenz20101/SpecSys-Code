@@ -1,0 +1,61 @@
+Here's a Python function that converts all **convertible elements** in a **list of lists** to `float`. It will attempt to convert each element to a float, and if it's not possible (e.g., strings that can't be parsed as numbers), it will leave the original value unchanged.
+
+### ✅ Function Definition:
+
+```python
+def convert_to_floats(nested_list):
+    """
+    Convert all convertible elements in a list of lists to floats.
+    
+    Parameters:
+    nested_list (list of lists): A list containing sublists with various data types.
+    
+    Returns:
+    list of lists: A new list of lists with all convertible elements converted to float.
+    """
+    result = []
+    for sublist in nested_list:
+        converted_sublist = []
+        for item in sublist:
+            try:
+                # Try converting to float
+                converted_sublist.append(float(item))
+            except (ValueError, TypeError):
+                # If conversion fails, keep the original item
+                converted_sublist.append(item)
+        result.append(converted_sublist)
+    return result
+```
+
+### 📌 Example Usage:
+
+```python
+data = [
+    ['1', '2.5', 'three', 4, None],
+    [10, '20.3', 'hello', 30, True],
+    ['123', 'abc', 45.6, '56.7']
+]
+
+converted = convert_to_floats(data)
+print(converted)
+```
+
+### 📌 Output:
+
+```python
+[
+    [1.0, 2.5, 'three', 4.0, None],
+    [10.0, 20.3, 'hello', 30.0, True],
+    [123.0, 'abc', 45.6, 56.7]
+]
+```
+
+### 🔍 Notes:
+- This function handles:
+  - Strings that can be parsed as numbers (e.g., `'123'`, `'45.6'`)
+  - Integers (e.g., `4`, `10`)
+  - Booleans (e.g., `True` becomes `1.0`, `False` becomes `0.0`)
+  - `None` or non-convertible strings (e.g., `'three'`, `'abc'`) are left as-is
+- You can customize the behavior for `None` or `bool` if needed.
+
+Let

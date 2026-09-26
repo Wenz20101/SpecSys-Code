@@ -1,0 +1,30 @@
+Sure! Here's a Python function that finds the length of the **longest word** in a given string (assuming words are separated by spaces):
+
+```python
+def longest_word_length(sentence):
+    # Split the sentence into words
+    words = sentence.split()
+    
+    # Check if there are no words
+    if not words:
+        return 0
+    
+    # Find the length of the longest word
+    max_length = max(len(word) for word in words)
+    
+    return max_length
+```
+
+### Example usage:
+
+```python
+text = "The quick brown fox jumps over the lazy dog"
+print(longest_word_length(text))  # Output: 5 ("quick", "brown", "jumps")
+```
+
+### Notes:
+- This function assumes that words are separated by whitespace.
+- It handles empty strings by returning `0`.
+- It uses a generator expression with `max()` for efficiency.
+
+Let me know if you want it to handle punctuation or other edge cases!

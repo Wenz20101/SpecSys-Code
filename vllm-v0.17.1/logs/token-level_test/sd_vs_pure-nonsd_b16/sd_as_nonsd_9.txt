@@ -1,0 +1,32 @@
+Sure! To find the **largest number** that can be formed from a given list of digits, you can follow these steps:
+
+1. **Sort the digits in descending order**.
+2. **Join them into a string** to form the number.
+3. **Return the result as an integer** (or string, depending on your needs).
+
+Here's a Python function that does this:
+
+```python
+def largest_number(digits):
+    # Sort the digits in descending order
+    digits.sort(reverse=True)
+    # Join the sorted digits into a string
+    largest_num_str = ''.join(map(str, digits))
+    # Convert to integer to remove leading zeros (if any)
+    largest_num = int(largest_num_str)
+    return largest_num
+```
+
+### Example usage:
+
+```python
+digits = [5, 3, 9, 1, 2]
+print(largest_number(digits))  # Output: 95321
+```
+
+### Notes:
+- This function assumes that the input is a list of integers (e.g., `[5, 3, 9, 1, 2]`).
+- If the input contains only zeros (e.g., `[0, 0, 0]`), it will return `0` (since `int('000')` is `0`).
+- If you want to return the number as a string (e.g., `'000'`), you can skip the `int()` conversion.
+
+Let me know if you want a version that returns a string instead!

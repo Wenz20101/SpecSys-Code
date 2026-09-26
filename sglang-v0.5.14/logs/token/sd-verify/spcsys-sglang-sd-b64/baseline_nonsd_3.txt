@@ -1,0 +1,30 @@
+You can use a regular expression to check if the input string contains sequences of lowercase letters joined with an underscore. Here's a Python function that does that:
+
+```python
+import re
+
+def contains_lowercase_underscore_sequences(s):
+    # Regular expression pattern to match sequences of lowercase letters joined with underscores
+    pattern = r'[a-z]+_[a-z]+'
+    return bool(re.search(pattern, s))
+```
+
+### Explanation:
+- `[a-z]+` matches one or more lowercase letters.
+- `_` matches the underscore character.
+- So, `[a-z]+_[a-z]+` matches a sequence like `"abc_def"` (lowercase letters, underscore, lowercase letters).
+- `re.search()` returns a match object if the pattern is found, otherwise `None`.
+- `bool(...)` converts the match object to `True` if found, `False` otherwise.
+
+### Example usage:
+
+```python
+print(contains_lowercase_underscore_sequences("hello_world"))  # True
+print(contains_lowercase_underscore_sequences("helloWorld"))   # False
+print(contains_lowercase_underscore_sequences("hello_world123"))  # True
+print(contains_lowercase_underscore_sequences("HELLO_WORLD"))  # False
+print(contains_lowercase_underscore_sequences("no_underscore"))  # True
+print(contains_lowercase_underscore_sequences("nounderscore"))  # False
+```
+
+Let me know if you want to match only **whole words** or enforce more strict rules!

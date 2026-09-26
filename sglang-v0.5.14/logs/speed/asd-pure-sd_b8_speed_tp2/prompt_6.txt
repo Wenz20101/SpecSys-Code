@@ -1,0 +1,10 @@
+MBPP sample index: 6
+task_id: 19
+
+Task:
+Write a function to find whether a given array of integers contains any duplicate element.
+
+Tests:
+['assert test_duplicate(([1,2,3,4,5]))==False'
+ 'assert test_duplicate(([1,2,3,4, 4]))==True'
+ 'assert test_duplicate([1,1,2,2,3,3,4,4,5])==True']

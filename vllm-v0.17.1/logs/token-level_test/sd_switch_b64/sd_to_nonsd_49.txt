@@ -1,0 +1,38 @@
+Here's a Python function that converts a snake case string to a camel case string:
+
+```python
+def snake_to_camel(snake_str):
+    """
+    Convert a snake case string to a camel case string.
+    
+    Parameters:
+    snake_str (str): The input string in snake case.
+    
+    Returns:
+    str: The converted string in camel case.
+    """
+    return ''.join(word.capitalize() for word in snake_str.split('_'))
+```
+
+### Explanation:
+- The function splits the input string by the underscore (`_`) character.
+- Each word is then capitalized using `capitalize()`.
+- Finally, the words are joined together to form the camel case string.
+
+### Example Usage:
+```python
+print(snake_to_camel('python_program'))      # Output: PythonProgram
+print(snake_to_camel('python_language'))     # Output: PythonLanguage
+print(snake_to_camel('programming_language'))# Output: ProgrammingLanguage
+```
+
+### Test Cases:
+You can run the following assertions to verify the function:
+
+```python
+assert snake_to_camel('python_program') == 'PythonProgram'
+assert snake_to_camel('python_language') == 'PythonLanguage'
+assert snake_to_camel('programming_language') == 'ProgrammingLanguage'
+```
+
+Let me know if you'd like a version that handles edge cases like empty strings or strings with multiple underscores.

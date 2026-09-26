@@ -1,0 +1,32 @@
+Here's a Python function that checks if a given string is present as a **substring** in **any** of the strings in a list:
+
+```python
+def is_substring_in_list(target, string_list):
+    """
+    Check if `target` is a substring of any string in `string_list`.
+
+    Parameters:
+    - target (str): The substring to search for.
+    - string_list (list): A list of strings to search within.
+
+    Returns:
+    - bool: True if `target` is found as a substring in any element of `string_list`, False otherwise.
+    """
+    for s in string_list:
+        if target in s:
+            return True
+    return False
+```
+
+### Example Usage:
+
+```python
+words = ["hello world", "python programming", "substring example"]
+print(is_substring_in_list("hello", words))       # True
+print(is_substring_in_list("java", words))        # False
+print(is_substring_in_list("example", words))     # True
+```
+
+### Notes:
+- This function is case-sensitive. If you want a case-insensitive search, you can modify the check to use `.lower()` on both the target and the string.
+- It returns as soon as it finds a match, so it's efficient for large lists.

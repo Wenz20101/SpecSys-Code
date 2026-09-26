@@ -1,0 +1,9 @@
+MBPP sample index: 68
+task_id: 127
+
+Task:
+Write a function to multiply two integers.
+
+Tests:
+['assert multiply_int(10,20)==200' 'assert multiply_int(5,10)==50'
+ 'assert multiply_int(4,8)==32']

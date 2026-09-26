@@ -1,0 +1,4 @@
+sample_index: 54
+task_id: 108
+
+Write a function to merge three lists into a single sorted list.

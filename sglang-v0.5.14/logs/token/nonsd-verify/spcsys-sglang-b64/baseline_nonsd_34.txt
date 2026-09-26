@@ -1,0 +1,42 @@
+You can merge three dictionaries in Python using the `update()` method or the `**` unpacking operator. Here's a function that merges three dictionaries into a single dictionary:
+
+### ✅ Using `**` unpacking (Python 3.5+):
+
+```python
+def merge_three_dicts(dict1, dict2, dict3):
+    merged = {**dict1, **dict2, **dict3}
+    return merged
+```
+
+### ✅ Using `update()` method:
+
+```python
+def merge_three_dicts(dict1, dict2, dict3):
+    merged = {}
+    merged.update(dict1)
+    merged.update(dict2)
+    merged.update(dict3)
+    return merged
+```
+
+### 📌 Note:
+- If there are overlapping keys, the values from the **last** dictionary will overwrite the previous ones.
+- Both versions work the same way in terms of key overwriting.
+
+### 📌 Example usage:
+
+```python
+d1 = {'a': 1, 'b': 2}
+d2 = {'b': 3, 'c': 4}
+d3 = {'c': 5, 'd': 6}
+
+result = merge_three_dicts(d1, d2, d3)
+print(result)
+```
+
+### 📌 Output:
+```
+{'a': 1, 'b': 3, 'c': 5, 'd': 6}
+```
+
+Let me know if you want to merge more than three dictionaries or handle nested dictionaries!

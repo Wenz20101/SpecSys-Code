@@ -1,0 +1,9 @@
+MBPP sample index: 59
+task_id: 116
+
+Task:
+Write a function to convert a given tuple of positive integers into a single integer.
+
+Tests:
+['assert tuple_to_int((1,2,3))==123' 'assert tuple_to_int((4,5,6))==456'
+ 'assert tuple_to_int((5,6,7))==567']

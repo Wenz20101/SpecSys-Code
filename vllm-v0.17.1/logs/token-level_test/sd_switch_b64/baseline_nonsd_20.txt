@@ -1,0 +1,40 @@
+Here's a Python function that checks whether a list contains a given sublist. The function `is_sublist` will return `True` if the second list is a contiguous sublist of the first list, and `False` otherwise.
+
+```python
+def is_sublist(main_list, sub_list):
+    """
+    Check if sub_list is a contiguous sublist of main_list.
+
+    Parameters:
+    main_list (list): The list to search within.
+    sub_list (list): The sublist to search for.
+
+    Returns:
+    bool: True if sub_list is a sublist of main_list, False otherwise.
+    """
+    if not sub_list:
+        return True  # An empty list is a sublist of any list
+    if len(sub_list) > len(main_list):
+        return False  # Can't be a sublist if it's longer
+
+    for i in range(len(main_list) - len(sub_list) + 1):
+        if main_list[i:i + len(sub_list)] == sub_list:
+            return True
+    return False
+```
+
+### Example Usage:
+
+```python
+# Test cases
+assert is_sublist([2,4,3,5,7], [3,7]) == False
+assert is_sublist([2,4,3,5,7], [4,3]) == True
+assert is_sublist([2,4,3,5,7], [1,6]) == False
+```
+
+### Explanation:
+- The function iterates through the `main_list` and checks every possible slice of the same length as `sub_list`.
+- If any of those slices match `sub_list`, it returns `True`.
+- If no match is found, it returns `False`.
+
+This implementation handles the test cases you provided correctly.

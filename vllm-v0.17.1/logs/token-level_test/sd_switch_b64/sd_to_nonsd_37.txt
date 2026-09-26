@@ -1,0 +1,35 @@
+Here's a Python function that solves the MBPP task: **finding the length of the longest word in a list of strings**.
+
+```python
+def len_log(words):
+    """
+    Returns the length of the longest word in the given list of strings.
+    
+    Parameters:
+    words (list): A list of strings.
+    
+    Returns:
+    int: The length of the longest word.
+    """
+    if not words:
+        return 0  # Return 0 if the list is empty
+    return max(len(word) for word in words)
+```
+
+### Example Usage:
+
+```python
+print(len_log(["python", "PHP", "bigdata"]))  # Output: 7
+print(len_log(["a", "ab", "abc"]))            # Output: 3
+print(len_log(["small", "big", "tall"]))      # Output: 5
+```
+
+### Test Cases:
+
+```python
+assert len_log(["python", "PHP", "bigdata"]) == 7
+assert len_log(["a", "ab", "abc"]) == 3
+assert len_log(["small", "big", "tall"]) == 5
+```
+
+This function uses Python's built-in `max()` function with a generator expression to efficiently compute the length of the longest word in the list.

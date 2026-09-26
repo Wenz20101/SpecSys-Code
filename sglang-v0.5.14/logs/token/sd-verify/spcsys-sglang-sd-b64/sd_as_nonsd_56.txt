@@ -1,0 +1,56 @@
+Here's a Python function that finds the **common elements** across **given nested lists**. This function will recursively flatten the nested lists and then find the intersection of all elements.
+
+### ✅ Function: `find_common_elements`
+
+```python
+def find_common_elements(*nested_lists):
+    """
+    Find the common elements across multiple nested lists.
+
+    Parameters:
+    *nested_lists: Variable number of nested lists.
+
+    Returns:
+    A set containing the common elements found in all the input lists.
+    """
+    def flatten(lst):
+        """Recursively flatten a nested list."""
+        for item in lst:
+            if isinstance(item, list):
+                yield from flatten(item)
+            else:
+                yield item
+
+    # Flatten all the nested lists and convert to sets
+    sets = [set(flatten(lst)) for lst in nested_lists]
+
+    # Find the intersection of all sets
+    common_elements = set.intersection(*sets)
+
+    return common_elements
+```
+
+---
+
+### 📌 Example Usage:
+
+```python
+list1 = [1, [2, 3], [4, [5, 6]]]
+list2 = [[2, 3], 5, [6, 7]]
+list3 = [2, 3, 5, 6]
+
+common = find_common_elements(list1, list2, list3)
+print(common)  # Output: {2, 3, 5, 6}
+```
+
+---
+
+### 🔍 Explanation:
+
+- The `flatten` function is a **generator** that recursively goes through each element in the list.
+- If an element is a list, it continues to flatten it.
+- If it's not a list, it yields the element.
+- Then, we convert each flattened list into a `set`.
+- Finally, we use `set.intersection(*sets)` to find the common elements across all sets.
+
+Let me know if you want to handle other data types (like tuples or dictionaries) as well!

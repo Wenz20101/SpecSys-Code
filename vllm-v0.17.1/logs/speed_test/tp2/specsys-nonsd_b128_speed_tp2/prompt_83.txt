@@ -1,0 +1,10 @@
+MBPP sample index: 83
+task_id: 145
+
+Task:
+Write a python function to find the maximum difference between any two elements in a given array.
+
+Tests:
+['assert max_Abs_Diff((2,1,5,3)) == 4'
+ 'assert max_Abs_Diff((9,3,2,5,1)) == 8'
+ 'assert max_Abs_Diff((3,2,1)) == 2']

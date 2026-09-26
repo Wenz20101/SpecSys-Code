@@ -1,0 +1,4 @@
+sample_index: 36
+task_id: 89
+
+Write a function to find the closest smaller number than n.

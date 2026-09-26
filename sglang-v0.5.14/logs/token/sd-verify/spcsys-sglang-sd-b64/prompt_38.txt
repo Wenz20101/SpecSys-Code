@@ -1,0 +1,4 @@
+sample_index: 38
+task_id: 91
+
+Write a function to check if a string is present as a substring in a given list of string values.

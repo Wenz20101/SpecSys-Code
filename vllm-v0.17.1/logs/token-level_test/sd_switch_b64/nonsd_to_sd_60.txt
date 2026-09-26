@@ -1,0 +1,34 @@
+Here's a Python function that converts all possible convertible elements in a list of lists (or tuples) to floats. It handles strings that can be converted to floats and leaves non-convertible elements unchanged (though the test cases suggest all elements are strings that can be converted).
+
+```python
+def list_to_float(lst):
+    """
+    Convert all possible convertible elements in a list of lists (or tuples) to floats.
+    
+    Parameters:
+    lst (list of tuples): A list of tuples containing strings that may be convertible to floats.
+    
+    Returns:
+    list of tuples: A new list of tuples with all convertible elements converted to floats.
+    """
+    result = []
+    for item in lst:
+        converted = tuple(float(x) if x.replace('.', '', 1).lstrip('-').isdigit() else x for x in item)
+        result.append(converted)
+    return result
+```
+
+### Explanation:
+- The function iterates over each tuple in the input list.
+- For each element in the tuple, it checks if the string can be converted to a float:
+  - `x.replace('.', '', 1).lstrip('-').isdigit()` checks if the string is a valid number (with at most one decimal point and optional leading minus sign).
+- If it can be converted, it is converted to a float; otherwise, it remains as the original string.
+- The result is a list of tuples with converted values.
+
+### Example Usage:
+```python
+print(list_to_float([("3", "4"), ("1", "26.45"), ("7.32", "8"), ("4", "8")]))
+# Output: [(3.0, 4.0), (1.0, 26.45), (7.32, 8.0), (4.0, 8.0)]
+```
+
+This function should pass all the provided test cases.

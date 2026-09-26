@@ -1,0 +1,9 @@
+MBPP sample index: 112
+task_id: 242
+
+Task:
+Write a function to count the total number of characters in a string.
+
+Tests:
+['assert count_charac("python programming")==18'
+ 'assert count_charac("language")==8' 'assert count_charac("words")==5']

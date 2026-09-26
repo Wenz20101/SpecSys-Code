@@ -1,0 +1,11 @@
+MBPP sample index: 99
+task_id: 226
+
+Task:
+Write a python function to remove the characters which have odd index values of a given string.
+
+Tests:
+["assert odd_values_string('abcdef') == 'ace'"
+ "assert odd_values_string('python') == 'pto'"
+ "assert odd_values_string('data') == 'dt'"
+ "assert odd_values_string('lambs') == 'lms'"]

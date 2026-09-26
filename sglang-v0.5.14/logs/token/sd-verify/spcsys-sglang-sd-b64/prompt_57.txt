@@ -1,0 +1,4 @@
+sample_index: 57
+task_id: 113
+
+Write a function to check if a string represents an integer or not.

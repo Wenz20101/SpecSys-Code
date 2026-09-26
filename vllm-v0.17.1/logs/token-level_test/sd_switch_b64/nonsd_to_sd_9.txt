@@ -1,0 +1,32 @@
+Sure! To solve the task of finding the **largest number** that can be formed from a given list of digits, you can follow this approach:
+
+### Steps:
+1. **Sort the digits in descending order**.
+2. **Convert the sorted digits into a string**.
+3. **Convert the string to an integer** (to remove any leading zeros, if any).
+4. **Return the result as a string** (to preserve leading zeros if needed, though the test cases don't include such cases).
+
+Here's the Python function:
+
+```python
+def find_Max_Num(digits):
+    # Sort the digits in descending order
+    digits.sort(reverse=True)
+    # Convert the sorted list to a string
+    max_num_str = ''.join(map(str, digits))
+    # Convert to integer to remove leading zeros (if any), then back to string
+    return str(int(max_num_str))
+```
+
+### Example Usage:
+```python
+print(find_Max_Num([1, 2, 3]))       # Output: '321'
+print(find_Max_Num([4, 5, 6, 1]))    # Output: '6541'
+print(find_Max_Num([1, 2, 3, 9]))    # Output: '9321'
+```
+
+### Notes:
+- The function returns a string to match the expected output format in the test cases.
+- If the input is `[0, 0, 0]`, the function will return `'0'` instead of `'000'`, which is the correct behavior for representing the largest number.
+
+Let me know if you want to handle edge cases like all zeros or empty input!

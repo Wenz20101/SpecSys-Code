@@ -1,0 +1,4 @@
+sample_index: 58
+task_id: 115
+
+Write a function to check whether all dictionaries in a list are empty or not.

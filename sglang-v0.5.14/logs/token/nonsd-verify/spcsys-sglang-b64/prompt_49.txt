@@ -1,0 +1,4 @@
+sample_index: 49
+task_id: 102
+
+Write a function to convert a snake case string to camel case string.

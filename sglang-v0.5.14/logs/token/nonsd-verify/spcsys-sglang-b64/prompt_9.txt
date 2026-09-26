@@ -1,0 +1,4 @@
+sample_index: 9
+task_id: 57
+
+Write a python function to find the largest number that can be formed with the given list of digits.

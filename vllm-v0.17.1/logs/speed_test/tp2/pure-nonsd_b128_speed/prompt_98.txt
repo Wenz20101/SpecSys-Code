@@ -1,0 +1,9 @@
+MBPP sample index: 98
+task_id: 224
+
+Task:
+Write a python function to count the number of set bits (binary digits with value 1) in a given number.
+
+Tests:
+['assert count_Set_Bits(2) == 1' 'assert count_Set_Bits(4) == 1'
+ 'assert count_Set_Bits(6) == 2']

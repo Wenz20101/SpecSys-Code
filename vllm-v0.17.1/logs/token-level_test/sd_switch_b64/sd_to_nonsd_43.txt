@@ -1,0 +1,29 @@
+Here's a Python function that calculates the number of divisors of a given integer. The function is tested with the provided test cases.
+
+```python
+def divisor(n):
+    if n == 0:
+        return 0  # 0 has infinitely many divisors, but we return 0 as per convention
+    count = 0
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:
+            if i * i == n:
+                count += 1
+            else:
+                count += 2
+    return count
+
+# Test cases
+assert divisor(15) == 4
+assert divisor(12) == 6
+assert divisor(9) == 3
+```
+
+### Explanation:
+- The function `divisor(n)` calculates the number of positive divisors of `n`.
+- It iterates from `1` to the square root of `n`.
+- If `i` is a divisor of `n`, then `n // i` is also a divisor.
+- If `i` and `n // i` are the same (i.e., `i * i == n`), it's only counted once.
+- Otherwise, both divisors are counted.
+
+This function works efficiently even for large integers.

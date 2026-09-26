@@ -1,0 +1,4 @@
+sample_index: 40
+task_id: 93
+
+Write a function to calculate the value of 'a' to the power 'b'.

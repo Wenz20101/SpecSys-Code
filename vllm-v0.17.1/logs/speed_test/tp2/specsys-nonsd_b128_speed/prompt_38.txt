@@ -1,0 +1,10 @@
+MBPP sample index: 38
+task_id: 91
+
+Task:
+Write a function to check if a string is present as a substring in a given list of string values.
+
+Tests:
+['assert find_substring(["red", "black", "white", "green", "orange"],"ack")==True'
+ 'assert find_substring(["red", "black", "white", "green", "orange"],"abc")==False'
+ 'assert find_substring(["red", "black", "white", "green", "orange"],"ange")==True']

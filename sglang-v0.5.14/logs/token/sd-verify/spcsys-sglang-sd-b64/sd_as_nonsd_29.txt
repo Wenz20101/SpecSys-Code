@@ -1,0 +1,38 @@
+Sure! The formula to calculate the **volume of a sphere** is:
+
+$$
+V = \frac{4}{3} \pi r^3
+$$
+
+Where:
+- $ V $ is the volume,
+- $ r $ is the radius of the sphere,
+- $ \pi $ is a mathematical constant (approximately 3.14159).
+
+Here's a Python function that computes the volume of a sphere given its radius:
+
+```python
+import math
+
+def sphere_volume(radius):
+    """
+    Calculate the volume of a sphere given its radius.
+
+    Parameters:
+    radius (float): The radius of the sphere.
+
+    Returns:
+    float: The volume of the sphere.
+    """
+    if radius < 0:
+        raise ValueError("Radius cannot be negative.")
+    return (4.0 / 3.0) * math.pi * (radius ** 3)
+```
+
+### Example usage:
+
+```python
+print(sphere_volume(3))  # Output: 113.09733552923254
+```
+
+Let me know if you'd like to handle input validation or other features!

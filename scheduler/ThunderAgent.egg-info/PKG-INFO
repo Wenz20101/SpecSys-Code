@@ -1,0 +1,11 @@
+Metadata-Version: 2.4
+Name: ThunderAgent
+Version: 0.1.0
+Summary: agentic scheduler with program state tracking
+Requires-Python: >=3.10
+License-File: LICENSE.md
+Requires-Dist: fastapi
+Requires-Dist: httpx
+Requires-Dist: ijson
+Requires-Dist: uvicorn
+Dynamic: license-file

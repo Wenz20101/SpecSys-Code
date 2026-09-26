@@ -1,0 +1,11 @@
+MBPP sample index: 95
+task_id: 172
+
+Task:
+Write a function to count the number of occurence of the string 'std' in a given string.
+
+Tests:
+['assert count_occurance("letstdlenstdporstd") == 3'
+ 'assert count_occurance("truststdsolensporsd") == 1'
+ 'assert count_occurance("makestdsostdworthit") == 2'
+ 'assert count_occurance("stds") == 1' 'assert count_occurance("") == 0']

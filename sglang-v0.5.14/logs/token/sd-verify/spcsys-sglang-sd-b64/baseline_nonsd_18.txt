@@ -1,0 +1,60 @@
+To solve the problem of finding the number of ways to **partition a set of size `n`**, we are essentially computing the **Bell number** `B(n)`. The **Bell number** counts the number of different ways to partition a set of `n` elements.
+
+---
+
+### 🔢 What is a Bell Number?
+
+The **Bell number** `B(n)` is the number of **set partitions** of a set with `n` elements. For example:
+
+- `B(0) = 1` (one way to partition an empty set)
+- `B(1) = 1` (only one way to partition a single element)
+- `B(2) = 2` (either `{ {a, b} }` or `{ {a}, {b} }`)
+- `B(3) = 5`
+
+---
+
+### 🧮 How to Compute Bell Numbers
+
+We can compute Bell numbers using **Bell's triangle** or **Dobinski's formula**, but the most efficient and straightforward method for small to moderate `n` is using **Bell's triangle**.
+
+---
+
+### ✅ Python Function to Compute Bell Number
+
+Here's a Python function that computes the **Bell number** for a given `n` using **Bell's triangle**:
+
+```python
+def bell_number(n):
+    """
+    Returns the nth Bell number, which is the number of ways to partition a set of size n.
+    
+    Parameters:
+    n (int): The size of the set.
+    
+    Returns:
+    int: The nth Bell number.
+    """
+    if n == 0:
+        return 1
+
+    # Initialize Bell triangle
+    bell = [[0] * (n + 1) for _ in range(n + 1)]
+    bell[0][0] = 1  # B(0) = 1
+
+    for i in range(1, n + 1):
+        # First value in the row is the last value of the previous row
+        bell[i][0] = bell[i - 1][i - 1]
+
+        for j in range(1, i + 1):
+            bell[i][j] = bell[i][j - 1] + bell[i - 1][j - 1]
+
+    return bell[n][0]
+```
+
+---
+
+### 📌 Example Usage
+
+```python
+print(bell_number(0))  # Output: 1
+print(bell_number(1))  #

@@ -1,0 +1,44 @@
+Here's a Python function that checks whether **all the given tuples** have the **same length**:
+
+```python
+def all_tuples_equal_length(tuples_list):
+    """
+    Check if all tuples in the given list have the same length.
+
+    Parameters:
+    tuples_list (list of tuples): A list containing tuples.
+
+    Returns:
+    bool: True if all tuples have the same length, False otherwise.
+    """
+    if not tuples_list:
+        return True  # Empty list is considered as all tuples having equal length
+
+    # Get the length of the first tuple
+    first_length = len(tuples_list[0])
+
+    # Check if all other tuples have the same length
+    for t in tuples_list:
+        if len(t) != first_length:
+            return False
+
+    return True
+```
+
+### Example usage:
+
+```python
+# Example 1: All tuples have the same length
+tuples1 = [(1, 2), (3, 4), (5, 6)]
+print(all_tuples_equal_length(tuples1))  # Output: True
+
+# Example 2: Tuples have different lengths
+tuples2 = [(1, 2), (3, 4, 5), (6,)]
+print(all_tuples_equal_length(tuples2))  # Output: False
+
+# Example 3: Empty list
+tuples3 = []
+print(all_tuples_equal_length(tuples3))  # Output: True
+```
+
+Let me know if you want to handle other data types or add more features!

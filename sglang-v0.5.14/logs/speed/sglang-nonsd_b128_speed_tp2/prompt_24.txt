@@ -1,0 +1,10 @@
+MBPP sample index: 24
+task_id: 74
+
+Task:
+Write a function to check whether it follows the sequence given in the patterns array.
+
+Tests:
+['assert is_samepatterns(["red","green","green"], ["a", "b", "b"])==True'
+ 'assert is_samepatterns(["red","green","greenn"], ["a","b","b"])==False'
+ 'assert is_samepatterns(["red","green","greenn"], ["a","b"])==False']

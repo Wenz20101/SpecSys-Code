@@ -1,0 +1,18 @@
+Here's a Python function that calculates the value of `'a'` to the power `'b'`, using Python's built-in exponentiation operator `**`. This function will pass all the provided test cases.
+
+```python
+def power(a, b):
+    return a ** b
+```
+
+### Example usage and tests:
+
+```python
+assert power(3, 4) == 81
+assert power(2, 3) == 8
+assert power(5, 5) == 3125
+```
+
+### Explanation:
+- The function `power(a, b)` simply returns `a ** b`, which is the standard way to compute exponentiation in Python.
+- This implementation is concise and efficient for positive integers `a` and `b`. If you need to handle edge cases like negative exponents or non-integer inputs, additional logic would be required.

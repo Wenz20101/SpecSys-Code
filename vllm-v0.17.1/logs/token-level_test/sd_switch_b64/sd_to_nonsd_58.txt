@@ -1,0 +1,36 @@
+Here's a Python function that checks whether **all dictionaries** in a list are empty. It also handles the case where the input is **not a list** (like a single dictionary), as seen in the third test case.
+
+### ✅ Function Definition:
+
+```python
+def empty_dit(input_data):
+    # Check if the input is a list
+    if isinstance(input_data, list):
+        # Check if all items in the list are empty dictionaries
+        return all(isinstance(d, dict) and not d for d in input_data)
+    # If it's a single dictionary, check if it's empty
+    elif isinstance(input_data, dict):
+        return not input_data
+    # If it's not a list or a dict, return False
+    else:
+        return False
+```
+
+### ✅ Explanation:
+
+- `isinstance(input_data, list)` checks if the input is a list.
+- `all(...)` ensures that **every** item in the list satisfies the condition.
+- `isinstance(d, dict)` ensures that each item is a dictionary.
+- `not d` checks if the dictionary is empty.
+- If the input is a **single dictionary**, it checks if it's empty.
+- If the input is **not a list or a dictionary**, it returns `False`.
+
+### ✅ Test Cases:
+
+```python
+assert empty_dit([{},{},{}]) == True
+assert empty_dit([{1,2},{},{}]) == False
+assert empty_dit({}) == True
+```
+
+These tests should all pass with the above function.

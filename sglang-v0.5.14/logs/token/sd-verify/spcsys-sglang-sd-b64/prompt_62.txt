@@ -1,0 +1,4 @@
+sample_index: 62
+task_id: 119
+
+Write a python function to find the element that appears only once in a sorted array.

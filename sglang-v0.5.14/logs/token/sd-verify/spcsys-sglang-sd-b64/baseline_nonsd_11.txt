@@ -1,0 +1,34 @@
+An **octagonal number** is a figurate number that represents an octagon. The formula for the **nth octagonal number** is:
+
+$$
+O_n = 3n^2 - 2n
+$$
+
+Here's a Python function to compute the **nth octagonal number**:
+
+```python
+def nth_octagonal_number(n):
+    """
+    Returns the nth octagonal number.
+    
+    Parameters:
+    n (int): The position in the sequence of octagonal numbers.
+    
+    Returns:
+    int: The nth octagonal number.
+    """
+    if n < 1:
+        raise ValueError("n must be a positive integer.")
+    return 3 * n * n - 2 * n
+```
+
+### Example usage:
+
+```python
+print(nth_octagonal_number(1))  # Output: 1
+print(nth_octagonal_number(2))  # Output: 12
+print(nth_octagonal_number(3))  # Output: 33
+print(nth_octagonal_number(4))  # Output: 64
+```
+
+Let me know if you'd like a version that generates the first `n` octagonal numbers or handles other related tasks!

@@ -1,0 +1,55 @@
+Sure! It seems like you want a function that checks whether a given list of values follows a specific **pattern** defined by another list (the `patterns` array). This is a common problem where you want to check if the **relative order** of elements in one list matches the **relative order** of elements in another list (the pattern).
+
+### Example:
+If `pattern = [1, 2, 1]` and `values = ['a', 'b', 'a']`, then the function should return `True` because the sequence of values follows the same pattern as the pattern list.
+
+Here's how you can implement this in Python:
+
+```python
+def follows_pattern(values, pattern):
+    """
+    Check if the values list follows the sequence given in the pattern list.
+    
+    Args:
+        values (list): The list of values to check.
+        pattern (list): The pattern to match against.
+    
+    Returns:
+        bool: True if values follow the pattern, False otherwise.
+    """
+    if len(values) != len(pattern):
+        return False
+
+    # Create a mapping from each unique pattern element to a sequence of indices
+    # This helps in matching the relative order
+    pattern_map = {}
+    for i, p in enumerate(pattern):
+        if p not in pattern_map:
+            pattern_map[p] = []
+        pattern_map[p].append(i)
+
+    # Now check if the values follow the same relative order
+    value_map = {}
+    for i, v in enumerate(values):
+        if v not in value_map:
+            value_map[v] = []
+        value_map[v].append(i)
+
+    # Compare the sequences of indices for each unique value
+    for v in value_map:
+        if len(value_map[v]) != len(pattern_map.get(v, [])):
+            return False
+        for i in range(len(value_map[v])):
+            if value_map[v][i] != pattern_map[v][i]:
+                return False
+
+    return True
+```
+
+### Example Usage:
+
+```python
+print(follows_pattern(['a', 'b', 'a'], [1, 2, 1]))  # True
+print(follows_pattern(['a', 'b', 'c'], [1, 2, 1]))  # False
+print(follows_pattern(['a', 'a', 'a'], [1, 1, 1]))  # True
+print(follows_pattern(['a', 'b', 'a', 'b'], [

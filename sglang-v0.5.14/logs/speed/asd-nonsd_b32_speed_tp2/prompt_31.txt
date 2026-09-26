@@ -1,0 +1,9 @@
+MBPP sample index: 31
+task_id: 84
+
+Task:
+Write a function to find the nth number in the newman conway sequence.
+
+Tests:
+['assert sequence(10) == 6' 'assert sequence(2) == 1'
+ 'assert sequence(3) == 2']

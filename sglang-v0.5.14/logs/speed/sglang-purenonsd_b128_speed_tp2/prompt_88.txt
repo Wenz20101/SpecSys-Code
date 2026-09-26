@@ -1,0 +1,10 @@
+MBPP sample index: 88
+task_id: 164
+
+Task:
+Write a function to determine if the sum of the divisors of two integers are the same.
+
+Tests:
+['assert are_equivalent(36, 57) == False'
+ 'assert are_equivalent(2, 4) == False'
+ 'assert are_equivalent(23, 47) == True']

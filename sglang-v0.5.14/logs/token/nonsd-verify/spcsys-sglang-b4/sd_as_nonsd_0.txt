@@ -1,0 +1,35 @@
+Here's a Python function that removes the **first and last occurrence** of a given character from a string:
+
+```python
+def remove_first_last_occurrence(s, char):
+    # Find the first and last occurrence of the character
+    first = s.find(char)
+    last = s.rfind(char)
+
+    # If the character is not found, return the original string
+    if first == -1:
+        return s
+
+    # If only one occurrence, remove it once
+    if first == last:
+        return s[:first] + s[first+1:]
+
+    # Remove both first and last occurrence
+    return s[:first] + s[first+1:last] + s[last+1:]
+```
+
+### Example usage:
+
+```python
+text = "hello world, hello"
+char = 'l'
+result = remove_first_last_occurrence(text, char)
+print(result)  # Output: "heo world, heo"
+```
+
+### Explanation:
+- `s.find(char)` gives the index of the **first** occurrence.
+- `s.rfind(char)` gives the index of the **last** occurrence.
+- If the character is not found (`first == -1`), the string is returned as-is.
+- If the character appears only once, it is removed once.
+- If it appears more than once, both the first and last occurrences are removed.

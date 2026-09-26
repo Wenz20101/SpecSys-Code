@@ -1,0 +1,25 @@
+Here's a Python function that solves the given MBPP (Minimum Basic Python Problem) task:
+
+### Task:
+Write a function to find the **closest smaller number than `n`**.
+
+### Explanation:
+The task seems to be asking for the **largest number less than `n`**. That would simply be `n - 1`.
+
+### Python Function:
+
+```python
+def closest_num(n):
+    return n - 1
+```
+
+### Test Cases:
+
+```python
+assert closest_num(11) == 10
+assert closest_num(7) == 6
+assert closest_num(12) == 11
+```
+
+### Summary:
+This function works for all integers `n > 0`. If you need to handle edge cases like `n = 0` or negative numbers, you can add additional logic, but based on the test cases provided, this simple implementation suffices.

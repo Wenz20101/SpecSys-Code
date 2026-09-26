@@ -1,0 +1,4 @@
+sample_index: 41
+task_id: 94
+
+Given a list of tuples, write a function that returns the first value of the tuple with the smallest second value.

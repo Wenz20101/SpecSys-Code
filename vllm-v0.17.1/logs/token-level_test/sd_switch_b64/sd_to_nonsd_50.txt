@@ -1,0 +1,38 @@
+To compute the **Eulerian number** $ a(n, m) $, we can use the following recurrence relation:
+
+$$
+a(n, m) = (n - m) \cdot a(n - 1, m - 1) + (m + 1) \cdot a(n - 1, m)
+$$
+
+with the base cases:
+- $ a(0, 0) = 1 $
+- $ a(n, m) = 0 $ if $ m < 0 $ or $ m \geq n $
+
+Here's a Python function that implements this recurrence using **memoization** to improve performance:
+
+```python
+from functools import lru_cache
+
+def eulerian_num(n, m):
+    @lru_cache(maxsize=None)
+    def eulerian(n, m):
+        if m < 0 or m >= n:
+            return 0
+        if n == 0:
+            return 1 if m == 0 else 0
+        return (n - m) * eulerian(n - 1, m - 1) + (m + 1) * eulerian(n - 1, m)
+    
+    return eulerian(n, m)
+
+# Test cases
+assert eulerian_num(3, 1) == 4
+assert eulerian_num(4, 1) == 11
+assert eulerian_num(5, 3) == 26
+```
+
+### Explanation:
+- The `eulerian_num` function wraps a helper function `eulerian` that uses memoization via `lru_cache` to avoid redundant calculations.
+- The recurrence is implemented recursively with the base cases handled correctly.
+- The test cases are included to verify the correctness of the function.
+
+This implementation is efficient for small to moderate values of `n` and `m`.

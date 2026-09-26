@@ -1,0 +1,25 @@
+Sure! Here's a Python function that checks if a given number is **one less than twice its reverse**:
+
+```python
+def is_one_less_than_twice_reverse(n):
+    # Reverse the number
+    reversed_n = int(str(n)[::-1])
+    
+    # Check if the number is one less than twice its reverse
+    return n == 2 * reversed_n - 1
+```
+
+### Example usage:
+
+```python
+print(is_one_less_than_twice_reverse(1))      # True (2*1 - 1 = 1)
+print(is_one_less_than_twice_reverse(3))      # True (2*3 - 1 = 5, reverse of 5 is 5)
+print(is_one_less_than_twice_reverse(12))     # False
+print(is_one_less_than_twice_reverse(21))     # True (reverse of 21 is 12, 2*12 - 1 = 23, not 21)
+```
+
+### Explanation:
+- The function first reverses the number by converting it to a string, reversing the string, and converting it back to an integer.
+- It then checks if the original number `n` is equal to `2 * reversed_n - 1`.
+
+Let me know if you want to find all such numbers within a range!

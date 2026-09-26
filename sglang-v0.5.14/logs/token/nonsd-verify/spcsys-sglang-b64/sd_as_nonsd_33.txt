@@ -1,0 +1,36 @@
+A **centered hexagonal number** (also known as a **hex pyramidal number**) is a figurate number that represents a hexagon with a dot in the center and all other dots surrounding it in successive hexagonal layers.
+
+The formula for the **nth centered hexagonal number** is:
+
+$$
+H(n) = 3n(n - 1) + 1
+$$
+
+### Python Function:
+
+```python
+def centered_hexagonal(n):
+    """
+    Returns the nth centered hexagonal number.
+    
+    Parameters:
+    n (int): The position in the sequence (n >= 1)
+    
+    Returns:
+    int: The nth centered hexagonal number
+    """
+    if n < 1:
+        raise ValueError("n must be a positive integer")
+    return 3 * n * (n - 1) + 1
+```
+
+### Example Usage:
+
+```python
+print(centered_hexagonal(1))  # Output: 1
+print(centered_hexagonal(2))  # Output: 7
+print(centered_hexagonal(3))  # Output: 19
+print(centered_hexagonal(4))  # Output: 37
+```
+
+Let me know if you'd like a version that returns a list of the first `n` centered hexagonal numbers!

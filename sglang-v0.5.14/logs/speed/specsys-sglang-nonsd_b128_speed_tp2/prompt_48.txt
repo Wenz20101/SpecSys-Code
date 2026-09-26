@@ -1,0 +1,10 @@
+MBPP sample index: 48
+task_id: 101
+
+Task:
+Write a function to find the kth element in the given array using 1-based indexing.
+
+Tests:
+['assert kth_element([12,3,5,7,19], 2) == 3'
+ 'assert kth_element([17,24,8,23], 3) == 8'
+ 'assert kth_element([16,21,25,36,4], 4) == 36']

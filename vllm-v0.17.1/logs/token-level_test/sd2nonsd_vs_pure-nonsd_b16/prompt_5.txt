@@ -1,0 +1,4 @@
+sample_index: 5
+task_id: 18
+
+Write a function to remove characters from the first string which are present in the second string.

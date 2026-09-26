@@ -1,0 +1,24 @@
+Here's a Python function that converts a given decimal number to its binary equivalent as a string, with no leading zeros:
+
+```python
+def decimal_to_binary(n):
+    if n == 0:
+        return '0'
+    return bin(n)[2:]
+```
+
+### Explanation:
+- The built-in Python function `bin(n)` returns the binary representation of the integer `n` as a string, prefixed with `'0b'`.
+- By slicing `[2:]`, we remove the `'0b'` prefix.
+- This function handles the case where `n == 0` by returning `'0'` directly, since `bin(0)` would return `'0b0'`, which would become `'0'` after slicing.
+
+### Test Cases:
+You can test the function with the provided test cases:
+
+```python
+assert decimal_to_binary(8) == '1000'
+assert decimal_to_binary(18) == '10010'
+assert decimal_to_binary(7) == '111'
+```
+
+All of these should pass.

@@ -1,0 +1,33 @@
+--- /home/user/toggle-consistency-batch-20260709-105517/baseline_nonsd_0.txt	2026-07-09 10:55:31.199794648 +0800
++++ /home/user/toggle-consistency-batch-20260709-105517/sd_as_nonsd_0.txt	2026-07-09 10:55:38.487794378 +0800
+@@ -10,21 +10,22 @@
+     if first == -1:
+         return s
+ 
+-    # If only one occurrence, remove it once
++    # Remove the first and last occurrence
++    # We need to make sure that first and last are not the same (i.e., only one occurrence)
+     if first == last:
++        # Only one occurrence, remove it once
+         return s[:first] + s[first+1:]
+-
+-    # Remove both first and last occurrence
+-    return s[:first] + s[first+1:last] + s[last+1:]
++    else:
++        # Remove both first and last
++        return s[:first] + s[first+1:last] + s[last+1:]
+ ```
+ 
+ ### Example usage:
+ 
+ ```python
+-text = "hello world, hello"
+-char = 'l'
+-result = remove_first_last_occurrence(text, char)
+-print(result)  # Output: "heo world, heo"
++print(remove_first_last_occurrence("hello world", "l"))  # Output: "heo word"
++print(remove_first_last_occurrence("banana", "a"))        # Output: "bann"
++print(remove_first_last_occurrence("test", "x"))          # Output: "test" (char not found)
+ ```
+ 
+ ### Explanation:

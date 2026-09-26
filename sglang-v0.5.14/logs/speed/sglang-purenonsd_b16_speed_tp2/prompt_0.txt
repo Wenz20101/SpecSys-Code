@@ -1,0 +1,10 @@
+MBPP sample index: 0
+task_id: 11
+
+Task:
+Write a python function to remove first and last occurrence of a given character from the string.
+
+Tests:
+['assert remove_Occ("hello","l") == "heo"'
+ 'assert remove_Occ("abcda","a") == "bcd"'
+ 'assert remove_Occ("PHP","P") == "H"']

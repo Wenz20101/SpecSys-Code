@@ -1,0 +1,29 @@
+Here's a Python function that counts the number of **positive numbers** in a list. It passes all the provided test cases:
+
+```python
+def pos_count(lst):
+    """
+    Count the number of positive numbers in a list.
+    
+    Parameters:
+    lst (list): A list of integers.
+    
+    Returns:
+    int: The count of positive numbers in the list.
+    """
+    return sum(1 for num in lst if num > 0)
+```
+
+### Example usage and tests:
+
+```python
+# Test cases
+assert pos_count([1, -2, 3, -4]) == 2
+assert pos_count([3, 4, 5, -1]) == 3
+assert pos_count([1, 2, 3, 4]) == 4
+```
+
+### Explanation:
+- The function uses a generator expression inside the `sum()` function.
+- For each number in the list, it checks if the number is greater than 0 (`num > 0`).
+- If true, it contributes `1` to the sum, effectively counting the number of positive elements.

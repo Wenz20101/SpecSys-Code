@@ -1,0 +1,9 @@
+MBPP sample index: 57
+task_id: 113
+
+Task:
+Write a function to check if a string represents an integer or not.
+
+Tests:
+['assert check_integer("python")==False' 'assert check_integer("1")==True'
+ 'assert check_integer("12345")==True']

@@ -1,0 +1,19 @@
+Here's a Python function that counts the number of `True` booleans in a given list:
+
+```python
+def count(boolean_list):
+    return sum(boolean_list)
+```
+
+### Explanation:
+In Python, `True` is equivalent to `1` and `False` is equivalent to `0` when used in arithmetic operations. So, summing the list directly gives the count of `True` values.
+
+### Example usage with the provided tests:
+
+```python
+assert count([True, False, True]) == 2
+assert count([False, False]) == 0
+assert count([True, True, True]) == 3
+```
+
+All the tests will pass with this implementation.

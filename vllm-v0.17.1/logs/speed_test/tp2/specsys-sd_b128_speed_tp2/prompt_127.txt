@@ -1,0 +1,9 @@
+MBPP sample index: 127
+task_id: 260
+
+Task:
+Write a function to find the nth newman–shanks–williams prime number.
+
+Tests:
+['assert newman_prime(3) == 7' 'assert newman_prime(4) == 17'
+ 'assert newman_prime(5) == 41']

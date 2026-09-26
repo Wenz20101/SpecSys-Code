@@ -1,0 +1,43 @@
+Sure! The surface area $ A $ of a sphere is given by the formula:
+
+$$
+A = 4\pi r^2
+$$
+
+Where:
+- $ r $ is the radius of the sphere
+- $ \pi $ is a mathematical constant approximately equal to 3.14159
+
+Here's a Python function to calculate the surface area of a sphere:
+
+```python
+import math
+
+def sphere_surface_area(radius):
+    """
+    Calculate the surface area of a sphere.
+
+    Parameters:
+    radius (float): The radius of the sphere.
+
+    Returns:
+    float: The surface area of the sphere.
+    """
+    if radius < 0:
+        raise ValueError("Radius cannot be negative.")
+    return 4 * math.pi * (radius ** 2)
+```
+
+### Example usage:
+
+```python
+area = sphere_surface_area(5)
+print(f"The surface area of the sphere is: {area:.2f}")
+```
+
+### Output:
+```
+The surface area of the sphere is: 314.16
+```
+
+Let me know if you'd like to handle different input types or add more features!

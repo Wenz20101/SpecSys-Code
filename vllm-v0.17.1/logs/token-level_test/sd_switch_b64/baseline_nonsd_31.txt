@@ -1,0 +1,61 @@
+To solve the **Newman-Conway Sequence** problem, we need to understand the recurrence relation of the sequence.
+
+### **Newman-Conway Sequence Definition:**
+The sequence is defined recursively as:
+
+$$
+P(n) = P(P(n-1)) + P(n - P(n-1))
+$$
+
+with the base cases:
+
+$$
+P(1) = 1, \quad P(2) = 1
+$$
+
+This sequence is also known as the **"Newman-Conway sequence"** and is OEIS sequence [A004001](https://oeis.org/A004001).
+
+---
+
+### ✅ **Python Function to Compute the nth Term of the Newman-Conway Sequence**
+
+Here's a Python function that uses **memoization** to efficiently compute the nth term:
+
+```python
+def sequence(n):
+    if n == 1 or n == 2:
+        return 1
+
+    # Initialize memoization list
+    memo = [0] * (n + 1)
+    memo[1] = 1
+    memo[2] = 1
+
+    for i in range(3, n + 1):
+        prev = memo[i - 1]
+        memo[i] = memo[prev] + memo[i - prev]
+
+    return memo[n]
+```
+
+---
+
+### ✅ **Test Cases**
+
+You can test the function with the following assertions:
+
+```python
+assert sequence(10) == 6
+assert sequence(2) == 1
+assert sequence(3) == 2
+```
+
+These tests should all pass.
+
+---
+
+### 📌 Notes:
+- The function uses **dynamic programming** with **memoization** to avoid redundant calculations.
+- It runs in **O(n)** time and space complexity.
+
+Let me know if you'd like a version that uses recursion with memoization instead!

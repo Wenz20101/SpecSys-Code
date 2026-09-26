@@ -1,0 +1,4 @@
+sample_index: 24
+task_id: 74
+
+Write a function to check whether it follows the sequence given in the patterns array.

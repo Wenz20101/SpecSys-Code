@@ -1,0 +1,4 @@
+sample_index: 28
+task_id: 80
+
+Write a function to find the nth tetrahedral number.

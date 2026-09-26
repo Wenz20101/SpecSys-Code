@@ -1,0 +1,4 @@
+sample_index: 23
+task_id: 72
+
+Write a python function to check whether the given number can be represented as the difference of two squares or not.

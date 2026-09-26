@@ -1,0 +1,25 @@
+Here's a Python function that merges three lists into a single sorted list:
+
+```python
+def merge_three_lists(list1, list2, list3):
+    # Merge the three lists
+    merged = list1 + list2 + list3
+    # Sort the merged list
+    merged.sort()
+    return merged
+```
+
+### Example usage:
+
+```python
+list_a = [1, 4, 7]
+list_b = [2, 5, 8]
+list_c = [3, 6, 9]
+
+result = merge_three_lists(list_a, list_b, list_c)
+print(result)  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+### Notes:
+- This function assumes that the input lists contain comparable elements (e.g., integers, strings).
+- If you want to merge and sort in a more efficient way (especially for large lists), you can use `heapq.merge` from the standard library. Let me know if you'd like that version too!

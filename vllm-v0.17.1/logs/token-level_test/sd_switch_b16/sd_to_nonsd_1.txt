@@ -1,0 +1,38 @@
+Here's a Python function that solves the given MBPP (Meta Benchmark for Python Programs) task. The function `sort_matrix` takes a matrix (a list of lists) and returns a new matrix sorted in ascending order based on the **sum of each row**.
+
+```python
+def sort_matrix(matrix):
+    """
+    Sorts a given matrix in ascending order based on the sum of its rows.
+
+    Parameters:
+    matrix (list of lists): The input matrix to be sorted.
+
+    Returns:
+    list of lists: The matrix sorted by the sum of its rows in ascending order.
+    """
+    # Sort the matrix based on the sum of each row
+    sorted_matrix = sorted(matrix, key=lambda row: sum(row))
+    return sorted_matrix
+```
+
+### Example Usage:
+
+```python
+# Test case 1
+print(sort_matrix([[1, 2, 3], [2, 4, 5], [1, 1, 1]]))
+# Output: [[1, 1, 1], [1, 2, 3], [2, 4, 5]]
+
+# Test case 2
+print(sort_matrix([[1, 2, 3], [-2, 4, -5], [1, -1, 1]]))
+# Output: [[-2, 4, -5], [1, -1, 1], [1, 2, 3]]
+
+# Test case 3
+print(sort_matrix([[5,8,9],[6,4,3],[2,1,4]]))
+# Output: [[2, 1, 4], [6, 4, 3], [5, 8, 9]]
+```
+
+### Explanation:
+- The `sorted()` function is used with a custom key: `key=lambda row: sum(row)`.
+- This key computes the sum of each row and uses it to determine the sorting order.
+- The function returns a new list of rows sorted by their row sums in ascending order.

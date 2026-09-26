@@ -1,0 +1,4 @@
+sample_index: 19
+task_id: 68
+
+Write a python function to check whether the given array is monotonic or not.

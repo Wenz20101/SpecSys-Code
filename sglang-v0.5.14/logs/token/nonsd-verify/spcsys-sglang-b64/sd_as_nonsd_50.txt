@@ -1,0 +1,64 @@
+The **Eulerian number** $ a(n, m) $ counts the number of permutations of the numbers $ 1, 2, \dots, n $ that have exactly $ m $ *ascents*. An *ascent* is a position $ i $ such that $ p_i < p_{i+1} $.
+
+---
+
+### ✅ **Definition Recap:**
+- $ a(n, m) $: Number of permutations of $ \{1, 2, \dots, n\} $ with exactly $ m $ ascents.
+- $ 0 \leq m < n $
+
+---
+
+### 🔁 **Recursive Formula:**
+
+Eulerian numbers can be computed using the following recurrence:
+
+$$
+a(n, m) = (n - m) \cdot a(n - 1, m - 1) + (m + 1) \cdot a(n - 1, m)
+$$
+
+With base cases:
+- $ a(0, 0) = 1 $
+- $ a(n, m) = 0 $ if $ m < 0 $ or $ m \geq n $
+
+---
+
+### 🧮 **Python Function:**
+
+Here's a Python function to compute the Eulerian number $ a(n, m) $ using memoization for efficiency:
+
+```python
+from functools import lru_cache
+
+def eulerian(n, m):
+    """
+    Compute the Eulerian number a(n, m), which is the number of permutations
+    of {1, 2, ..., n} with exactly m ascents.
+
+    Parameters:
+    n (int): The number of elements in the permutation.
+    m (int): The number of ascents.
+
+    Returns:
+    int: The Eulerian number a(n, m).
+    """
+    if m < 0 or m >= n:
+        return 0
+    if n == 0 and m == 0:
+        return 1
+
+    @lru_cache(maxsize=None)
+    def eulerian_recursive(n, m):
+        if m < 0 or m >= n:
+            return 0
+        if n == 0 and m == 0:
+            return 1
+        return (n - m) * eulerian_recursive(n - 1, m - 1) + (m + 1) * eulerian_recursive(n - 1, m)
+
+    return eulerian_recursive(n, m)
+```
+
+---
+
+### 📌 **Example Usage:**
+
+```python

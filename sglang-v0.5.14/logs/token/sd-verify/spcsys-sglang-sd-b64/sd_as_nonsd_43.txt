@@ -1,0 +1,35 @@
+Here's a Python function to find the **number of divisors** of a given integer:
+
+```python
+def count_divisors(n):
+    if n == 0:
+        return 0  # 0 has infinitely many divisors, but we return 0 here for practical purposes
+    if n < 0:
+        n = -n  # Make it positive, since divisors of a negative number are same as its positive counterpart
+
+    count = 0
+    for i in range(1, int(n**0.5) + 1):
+        if n % i == 0:
+            if i * i == n:
+                count += 1
+            else:
+                count += 2
+    return count
+```
+
+### Explanation:
+- The function first handles the special case of `n = 0` (which technically has infinite divisors, but we return 0 here).
+- For negative numbers, we convert them to positive since divisors are the same for both.
+- We iterate from `1` to the square root of `n` (`int(n**0.5) + 1`).
+- If `i` is a divisor of `n`, then `n // i` is also a divisor.
+- If `i` and `n // i` are the same (i.e., `i * i == n`), we count it once. Otherwise, we count both.
+
+### Example usage:
+```python
+print(count_divisors(12))  # Output: 6 (divisors: 1, 2, 3, 4, 6, 12)
+print(count_divisors(1))   # Output: 1 (only divisor is 1)
+print(count_divisors(0))   # Output: 0
+print(count_divisors(-28)) # Output: 6 (same as 28)
+```
+
+Let me know if you'd like a version that also returns the list of divisors!

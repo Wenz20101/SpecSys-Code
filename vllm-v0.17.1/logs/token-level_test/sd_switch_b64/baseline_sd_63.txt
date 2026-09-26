@@ -1,0 +1,32 @@
+Here's a Python function that solves the given MBPP (Math, Basic Programming Problems) task:
+
+### **Task Explanation:**
+You are given a list of tuples, and you need to find the **maximum absolute product** of the numbers in each tuple. Then, return the **maximum** of those products.
+
+### ✅ **Function:**
+
+```python
+def max_product_tuple(tuples_list):
+    max_product = float('-inf')
+    for a, b in tuples_list:
+        product = abs(a * b)
+        if product > max_product:
+            max_product = product
+    return max_product
+```
+
+### ✅ **Test Cases:**
+
+```python
+assert max_product_tuple([(2, 7), (2, 6), (1, 8), (4, 9)]) == 36
+assert max_product_tuple([(10, 20), (15, 2), (5, 10)]) == 200
+assert max_product_tuple([(11, 44), (10, 15), (20, 5), (12, 9)]) == 484
+```
+
+### 🔍 **Explanation:**
+- The function iterates through each tuple in the list.
+- For each tuple `(a, b)`, it calculates the **absolute product** `abs(a * b)`.
+- It keeps track of the **maximum** of these products.
+- Finally, it returns the **maximum absolute product**.
+
+Let me know if you'd like a version that returns the tuple with the maximum product as well!

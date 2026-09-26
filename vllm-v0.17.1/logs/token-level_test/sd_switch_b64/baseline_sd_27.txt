@@ -1,0 +1,33 @@
+Here's a Python function that checks whether the length of a word is **odd** or not. The function returns `True` if the length is odd, and `False` otherwise.
+
+```python
+def word_len(word):
+    """
+    Check if the length of the word is odd.
+
+    Parameters:
+    word (str): The input word.
+
+    Returns:
+    bool: True if the length is odd, False otherwise.
+    """
+    return len(word) % 2 == 1
+```
+
+### Example Usage:
+
+```python
+print(word_len("Hadoop"))    # Output: False (length is 6, even)
+print(word_len("great"))     # Output: True (length is 5, odd)
+print(word_len("structure")) # Output: True (length is 9, odd)
+```
+
+### Test Cases:
+
+```python
+assert word_len("Hadoop") == False
+assert word_len("great") == True
+assert word_len("structure") == True
+```
+
+This function should pass all the provided test cases.

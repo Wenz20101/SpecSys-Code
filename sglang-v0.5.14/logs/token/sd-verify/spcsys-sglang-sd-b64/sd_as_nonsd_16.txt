@@ -1,0 +1,30 @@
+Sure! Here's a Python function that **flattens a nested list** and then **sums all of its elements**:
+
+```python
+def flatten_and_sum(nested_list):
+    # Flatten the nested list
+    flat_list = []
+    for item in nested_list:
+        if isinstance(item, list):
+            flat_list.extend(flatten_and_sum(item))  # Recursively flatten
+        else:
+            flat_list.append(item)
+    
+    # Sum all elements in the flattened list
+    return sum(flat_list)
+```
+
+### Example usage:
+
+```python
+nested = [1, [2, [3, 4], 5], 6]
+result = flatten_and_sum(nested)
+print(result)  # Output: 21
+```
+
+### Explanation:
+- The function uses **recursion** to handle nested lists of any depth.
+- It checks if an item is a list, and if so, recursively flattens it.
+- Finally, it sums all the elements in the resulting flat list.
+
+Let me know if you want a version that handles other iterable types (like tuples) or uses a non-recursive approach!

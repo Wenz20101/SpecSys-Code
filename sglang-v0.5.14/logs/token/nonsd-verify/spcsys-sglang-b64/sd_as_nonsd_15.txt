@@ -1,0 +1,34 @@
+You can sort a list of tuples in Python using the `sorted()` function or the `list.sort()` method, and specify the `key` parameter to sort based on the second value of each tuple.
+
+Here's a Python function that does exactly that:
+
+```python
+def sort_tuples_by_second_value(tuples_list):
+    """
+    Sorts a list of tuples based on the second value of each tuple.
+
+    Parameters:
+    tuples_list (list): A list of tuples to be sorted.
+
+    Returns:
+    list: A new list of tuples sorted by the second value.
+    """
+    return sorted(tuples_list, key=lambda x: x[1])
+```
+
+### Example usage:
+
+```python
+data = [(1, 3), (4, 1), (2, 2), (5, 4)]
+sorted_data = sort_tuples_by_second_value(data)
+print(sorted_data)
+```
+
+### Output:
+```
+[(4, 1), (2, 2), (1, 3), (5, 4)]
+```
+
+### Notes:
+- The `key=lambda x: x[1]` tells Python to sort based on the second element of each tuple.
+- If you want to sort the list **in place**, you can use `tuples_list.sort(key=lambda x: x[1])` instead.

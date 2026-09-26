@@ -1,0 +1,27 @@
+You can solve this problem by using Python's built-in `min()` function with a custom key. Here's a function that does exactly that:
+
+```python
+def first_of_smallest_second(tuples_list):
+    if not tuples_list:
+        return None  # Return None if the list is empty
+    
+    # Find the tuple with the smallest second value
+    smallest_tuple = min(tuples_list, key=lambda x: x[1])
+    
+    # Return the first value of that tuple
+    return smallest_tuple[0]
+```
+
+### Example usage:
+
+```python
+data = [(1, 10), (2, 5), (3, 15), (4, 2)]
+result = first_of_smallest_second(data)
+print(result)  # Output: 2
+```
+
+### Explanation:
+- `min()` is used with `key=lambda x: x[1]` to find the tuple with the smallest second value.
+- Then, we return the first element of that tuple.
+
+Let me know if you want to handle edge cases like empty tuples or non-integer values!

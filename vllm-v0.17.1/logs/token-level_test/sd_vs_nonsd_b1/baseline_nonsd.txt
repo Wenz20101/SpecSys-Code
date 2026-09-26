@@ -1,0 +1,42 @@
+Here's a Python function that sorts a given matrix in ascending order based on the **sum of its rows**:
+
+```python
+def sort_matrix_by_row_sum(matrix):
+    """
+    Sorts a matrix in ascending order based on the sum of its rows.
+
+    Parameters:
+    matrix (list of list of int): A 2D list representing the matrix.
+
+    Returns:
+    list of list of int: A new matrix sorted by the sum of its rows.
+    """
+    # Sort the matrix based on the sum of each row
+    sorted_matrix = sorted(matrix, key=lambda row: sum(row))
+    return sorted_matrix
+```
+
+### Example Usage:
+
+```python
+matrix = [
+    [1, 2, 3],
+    [4, 5],
+    [6],
+    [0, 0, 0],
+    [10, -1]
+]
+
+sorted_matrix = sort_matrix_by_row_sum(matrix)
+print(sorted_matrix)
+```
+
+### Output:
+```
+[[0, 0, 0], [6], [1, 2, 3], [10, -1], [4, 5]]
+```
+
+### Explanation:
+- The function uses Python's built-in `sorted()` function.
+- The `key` parameter is set to `lambda row: sum(row)`, which computes the sum of each row to determine the sorting order.
+- The matrix is sorted in **ascending** order of these sums.

@@ -1,0 +1,4 @@
+sample_index: 31
+task_id: 84
+
+Write a function to find the nth number in the newman conway sequence.

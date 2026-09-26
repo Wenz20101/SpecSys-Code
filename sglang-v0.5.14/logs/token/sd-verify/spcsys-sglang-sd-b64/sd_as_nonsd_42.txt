@@ -1,0 +1,24 @@
+Here's a Python function that finds the length of the smallest list within a list of lists:
+
+```python
+def smallest_list_length(list_of_lists):
+    if not list_of_lists:
+        return 0  # Return 0 if the input is empty
+    
+    # Use the min function with key=len to find the shortest list
+    shortest_list = min(list_of_lists, key=len)
+    return len(shortest_list)
+```
+
+### Example usage:
+
+```python
+lists = [[1, 2], [3], [4, 5, 6], [], [7, 8, 9, 10]]
+print(smallest_list_length(lists))  # Output: 0
+```
+
+### Explanation:
+- `min(list_of_lists, key=len)` finds the list with the minimum length.
+- `len(shortest_list)` returns the length of that list.
+
+Let me know if you want to handle edge cases like empty lists or non-list elements!

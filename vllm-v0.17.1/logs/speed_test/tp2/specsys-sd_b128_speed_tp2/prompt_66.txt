@@ -1,0 +1,10 @@
+MBPP sample index: 66
+task_id: 125
+
+Task:
+Write a function to find the maximum difference between the number of 0s and number of 1s in any sub-string of the given binary string.
+
+Tests:
+['assert find_length("11000010001") == 6'
+ 'assert find_length("10111") == 1'
+ 'assert find_length("11011101100101") == 2']

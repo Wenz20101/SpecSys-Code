@@ -1,0 +1,54 @@
+Sure! Here's a simple Python function to sort a list of elements. This function uses Python's built-in `sorted()` function, which is efficient and handles various data types (e.g., integers, strings, etc.).
+
+### Function to Sort a List:
+
+```python
+def sort_list(elements):
+    """
+    Sorts a list of elements in ascending order.
+
+    Parameters:
+    elements (list): A list of elements to be sorted.
+
+    Returns:
+    list: A new list containing the sorted elements.
+    """
+    return sorted(elements)
+```
+
+### Example Usage:
+
+```python
+numbers = [5, 2, 9, 1, 5, 6]
+sorted_numbers = sort_list(numbers)
+print(sorted_numbers)  # Output: [1, 2, 5, 5, 6, 9]
+
+words = ["banana", "apple", "cherry"]
+sorted_words = sort_list(words)
+print(sorted_words)  # Output: ['apple', 'banana', 'cherry']
+```
+
+### If You Want to Sort In-Place:
+
+If you want to sort the list **in-place** (i.e., modify the original list), you can use the `list.sort()` method instead:
+
+```python
+def sort_list_in_place(elements):
+    """
+    Sorts a list of elements in-place in ascending order.
+
+    Parameters:
+    elements (list): A list of elements to be sorted.
+    """
+    elements.sort()
+```
+
+### Example Usage for In-Place Sorting:
+
+```python
+numbers = [5, 2, 9, 1, 5, 6]
+sort_list_in_place(numbers)
+print(numbers)  # Output: [1, 2, 5, 5, 6, 9]
+```
+
+Let me know if you want to sort in descending order or handle custom sorting logic!

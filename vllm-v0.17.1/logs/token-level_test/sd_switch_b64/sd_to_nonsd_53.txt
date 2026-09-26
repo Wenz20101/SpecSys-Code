@@ -1,0 +1,43 @@
+Here's a Python function that solves the given MBPP (Machine-Behavioral Programming Problems) task:
+
+### Task:
+Write a function to **append the given list to the given tuples**.
+
+### Explanation:
+- The function should take a list and a tuple as inputs.
+- It should return a new tuple that is the original tuple followed by the elements of the list.
+
+### Solution:
+
+```python
+def add_lists(lst, tpl):
+    """
+    Appends the elements of the given list to the given tuple and returns a new tuple.
+
+    Parameters:
+    lst (list): The list to be appended.
+    tpl (tuple): The original tuple.
+
+    Returns:
+    tuple: A new tuple with the elements of the list appended to the original tuple.
+    """
+    return tpl + tuple(lst)
+```
+
+### Example Usage:
+
+```python
+print(add_lists([5, 6, 7], (9, 10)))  # Output: (9, 10, 5, 6, 7)
+print(add_lists([6, 7, 8], (10, 11))) # Output: (10, 11, 6, 7, 8)
+print(add_lists([7, 8, 9], (11, 12))) # Output: (11, 12, 7, 8, 9)
+```
+
+### Test Cases:
+
+```python
+assert add_lists([5, 6, 7], (9, 10)) == (9, 10, 5, 6, 7)
+assert add_lists([6, 7, 8], (10, 11)) == (10, 11, 6, 7, 8)
+assert add_lists([7, 8, 9], (11, 12)) == (11, 12, 7, 8, 9)
+```
+
+All the test cases will pass with this implementation.

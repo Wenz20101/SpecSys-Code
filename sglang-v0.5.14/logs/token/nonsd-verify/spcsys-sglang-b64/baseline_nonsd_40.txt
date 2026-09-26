@@ -1,0 +1,27 @@
+You can write a Python function to calculate the value of `a` raised to the power `b` using the built-in exponentiation operator `**`. Here's a simple implementation:
+
+```python
+def power(a, b):
+    """
+    Calculate a raised to the power of b.
+
+    Parameters:
+    a (float or int): The base.
+    b (float or int): The exponent.
+
+    Returns:
+    float or int: The result of a^b.
+    """
+    return a ** b
+```
+
+### Example usage:
+
+```python
+print(power(2, 3))   # Output: 8
+print(power(5, 0))   # Output: 1
+print(power(2, -3))  # Output: 0.125
+print(power(3, 2.5)) # Output: ~15.588
+```
+
+This function works for both integers and floating-point numbers. If you want to handle special cases (like `0^0`, `negative base` with non-integer exponents, etc.), you can add additional error checking. Let me know if you'd like that version too!

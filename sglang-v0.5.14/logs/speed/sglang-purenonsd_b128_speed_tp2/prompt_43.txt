@@ -1,0 +1,9 @@
+MBPP sample index: 43
+task_id: 96
+
+Task:
+Write a python function to find the number of divisors of a given integer.
+
+Tests:
+['assert divisor(15) == 4' 'assert divisor(12) == 6'
+ 'assert divisor(9) == 3']

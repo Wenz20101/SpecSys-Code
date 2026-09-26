@@ -1,0 +1,50 @@
+Sure! It seems like you want a function that checks whether a given list of values follows a specific **pattern** defined by another list (the `patterns` array). This is a common problem where you want to check if the **relative order** of elements in one list matches the **relative order** of elements in another list (the pattern).
+
+### Example:
+If `pattern = [1, 2, 1]` and `values = ['a', 'b', 'a']`, then the function should return `True` because the sequence of values follows the same pattern as the pattern list.
+
+Here's how you can implement this in Python:
+
+```python
+def follows_pattern(values, pattern):
+    """
+    Check if the values list follows the sequence given in the pattern list.
+    
+    Args:
+        values (list): The list of values to check.
+        pattern (list): The pattern to match against.
+    
+    Returns:
+        bool: True if values follow the pattern, False otherwise.
+    """
+    if len(values) != len(pattern):
+        return False
+
+    # Map each unique value in values to a unique index in the pattern
+    value_to_pattern = {}
+    for val, pat in zip(values, pattern):
+        if val in value_to_pattern:
+            if value_to_pattern[val] != pat:
+                return False
+        else:
+            value_to_pattern[val] = pat
+
+    return True
+```
+
+### Example Usage:
+
+```python
+print(follows_pattern(['a', 'b', 'a'], [1, 2, 1]))  # True
+print(follows_pattern(['a', 'b', 'c'], [1, 2, 1]))  # False
+print(follows_pattern(['x', 'y', 'x', 'y'], [1, 2, 1, 2]))  # True
+print(follows_pattern(['x', 'x', 'x'], [1, 1, 1]))  # True
+print(follows_pattern(['x', 'x', 'y'], [1, 1, 2]))  # True
+```
+
+### Explanation:
+- The function maps each unique value in `values` to the corresponding value in `pattern`.
+- If a value is seen again, it must map to the same pattern value.
+- If any mismatch is found, it returns `False`.
+
+Let me know if you want to support different types of patterns or more advanced logic!

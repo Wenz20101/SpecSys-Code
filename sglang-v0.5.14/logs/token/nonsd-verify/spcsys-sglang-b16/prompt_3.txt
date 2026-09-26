@@ -1,0 +1,4 @@
+sample_index: 3
+task_id: 16
+
+Write a function to that returns true if the input string contains sequences of lowercase letters joined with an underscore and false otherwise.

@@ -1,0 +1,44 @@
+Here's a Python function that solves the given MBPP (Meta's Basic Python Problems) task: **Finding the common elements in given nested lists**.
+
+### ✅ Problem Summary:
+You are given a list of lists (nested lists), and you need to return the elements that are **common to all** of them.
+
+### 🔍 Approach:
+- Convert the first list to a set.
+- For each subsequent list, convert it to a set and take the intersection with the current result.
+- The final result will be the elements common to all lists.
+
+### 🧠 Example:
+For input:
+```python
+[[12, 18, 23, 25, 45], [7, 12, 18, 24, 28], [1, 5, 8, 12, 15, 16, 18]]
+```
+The common elements are: `{12, 18}`
+
+---
+
+### ✅ Python Function:
+
+```python
+def common_in_nested_lists(nested_lists):
+    if not nested_lists:
+        return []
+    
+    common = set(nested_lists[0])
+    for lst in nested_lists[1:]:
+        common = common.intersection(set(lst))
+    
+    return list(common)
+```
+
+---
+
+### 🧪 Test Cases:
+
+```python
+assert set(common_in_nested_lists([[12, 18, 23, 25, 45], [7, 12, 18, 24, 28], [1, 5, 8, 12, 15, 16, 18]])) == set([18, 12])
+assert set(common_in_nested_lists([[12, 5, 23, 25, 45], [7, 11, 5, 23, 28], [1, 5, 8, 18, 23, 16]])) == set([5, 23])
+assert set(common_in_nested_lists([[2, 3, 4, 1], [4, 5], [6, 4, 8], [4, 5], [6, 8, 4]])) == set([4])
+```
+
+All tests should pass with this implementation.

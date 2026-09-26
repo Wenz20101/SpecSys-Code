@@ -1,0 +1,4 @@
+sample_index: 47
+task_id: 100
+
+Write a function to find the next smallest palindrome of a specified integer, returned as an integer.

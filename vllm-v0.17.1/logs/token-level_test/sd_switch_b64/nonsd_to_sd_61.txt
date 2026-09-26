@@ -1,0 +1,33 @@
+Here's a Python function that solves the MBPP task as described. The function `string_to_list` takes a string as input and returns a list of substrings split by the space character.
+
+```python
+def string_to_list(s):
+    """
+    Converts a string to a list of strings split on the space character.
+
+    Parameters:
+    s (str): The input string to be split.
+
+    Returns:
+    list: A list of substrings split by spaces.
+    """
+    return s.split()
+```
+
+### Example Usage:
+
+```python
+print(string_to_list("python programming"))       # Output: ['python', 'programming']
+print(string_to_list("lists tuples strings"))     # Output: ['lists', 'tuples', 'strings']
+print(string_to_list("write a program"))          # Output: ['write', 'a', 'program']
+```
+
+### Test Cases:
+
+```python
+assert string_to_list("python programming") == ['python', 'programming']
+assert string_to_list("lists tuples strings") == ['lists', 'tuples', 'strings']
+assert string_to_list("write a program") == ['write', 'a', 'program']
+```
+
+This function uses Python's built-in `str.split()` method, which by default splits on whitespace (including spaces, tabs, newlines, etc.), but in this case, it works exactly as required for splitting on space characters.

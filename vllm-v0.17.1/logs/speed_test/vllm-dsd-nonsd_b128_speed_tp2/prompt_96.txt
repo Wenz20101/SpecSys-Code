@@ -1,0 +1,10 @@
+MBPP sample index: 96
+task_id: 222
+
+Task:
+Write a function to check if all the elements in tuple have same data type or not.
+
+Tests:
+['assert check_type((5, 6, 7, 3, 5, 6) ) == True'
+ 'assert check_type((1, 2, "4") ) == False'
+ 'assert check_type((3, 2, 1, 4, 5) ) == True']

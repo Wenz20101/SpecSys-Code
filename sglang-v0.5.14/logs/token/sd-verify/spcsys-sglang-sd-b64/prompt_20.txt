@@ -1,0 +1,4 @@
+sample_index: 20
+task_id: 69
+
+Write a function to check whether a list contains the given sublist or not.

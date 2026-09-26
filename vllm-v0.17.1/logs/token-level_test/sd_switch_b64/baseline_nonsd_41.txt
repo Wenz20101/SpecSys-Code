@@ -1,0 +1,34 @@
+Here's a Python function that solves the given MBPP (Minimum By Python Problem) task:
+
+### **Task Explanation:**
+You are given a list of tuples, where each tuple contains a string and a number. You need to return the **first value** (the string) of the tuple that has the **smallest second value** (the number).
+
+---
+
+### ✅ **Python Function:**
+
+```python
+def index_minimum(lst):
+    # Find the tuple with the smallest second value
+    min_tuple = min(lst, key=lambda x: x[1])
+    # Return the first value of that tuple
+    return min_tuple[0]
+```
+
+---
+
+### 🔍 **Explanation:**
+- `min(lst, key=lambda x: x[1])` finds the tuple with the **smallest second element**.
+- `min_tuple[0]` returns the **first element** of that tuple, which is the string you're looking for.
+
+---
+
+### ✅ **Test Cases:**
+
+```python
+assert index_minimum([('Rash', 143), ('Manjeet', 200), ('Varsha', 100)]) == 'Varsha'
+assert index_minimum([('Yash', 185), ('Dawood', 125), ('Sanya', 175)]) == 'Dawood'
+assert index_minimum([('Sai', 345), ('Salman', 145), ('Ayesha', 96)]) == 'Ayesha'
+```
+
+All the test cases will pass with this function.

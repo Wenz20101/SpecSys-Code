@@ -1,0 +1,3 @@
+label	num_runs	batch_size	total_ok	total_failed	mean_batch_wall_s	mean_avg_jct_s	mean_p50_jct_s	mean_p90_jct_s	mean_p95_jct_s	mean_throughput_jobs_per_s	pooled_avg_jct_s	overall_throughput_jobs_per_s
+baseline_nonsd	10	4	40	0	4.960024	4.110479	3.806380	4.959544	4.959544	0.806620	4.110479	0.806448
+baseline_sd	10	4	40	0	3.152924	2.905120	2.817884	3.152220	3.152220	1.270221	2.905120	1.268664

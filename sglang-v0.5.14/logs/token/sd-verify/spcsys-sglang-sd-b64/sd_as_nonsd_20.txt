@@ -1,0 +1,52 @@
+You can write a Python function to check whether a list contains a given sublist using a simple approach that iterates through the main list and checks for the presence of the sublist at each position.
+
+Here's a function to do that:
+
+```python
+def contains_sublist(main_list, sublist):
+    """
+    Check if the main_list contains the sublist as a contiguous sequence.
+
+    Parameters:
+    main_list (list): The list to search within.
+    sublist (list): The sublist to search for.
+
+    Returns:
+    bool: True if the sublist is found, False otherwise.
+    """
+    len_main = len(main_list)
+    len_sub = len(sublist)
+
+    # If the sublist is longer than the main list, it can't be a sublist
+    if len_sub > len_main:
+        return False
+
+    # Check each possible starting position in main_list
+    for i in range(len_main - len_sub + 1):
+        if main_list[i:i + len_sub] == sublist:
+            return True
+
+    return False
+```
+
+### Example Usage:
+
+```python
+# Example 1
+print(contains_sublist([1, 2, 3, 4, 5], [2, 3]))  # Output: True
+
+# Example 2
+print(contains_sublist([1, 2, 3, 4, 5], [3, 4, 5]))  # Output: True
+
+# Example 3
+print(contains_sublist([1, 2, 3, 4, 5], [2, 4]))  # Output: False
+
+# Example 4
+print(contains_sublist([1, 2, 3], [1, 2, 3, 4]))  # Output: False
+```
+
+### Notes:
+- This function checks for **contiguous** sublists.
+- If you want to check for **non-contiguous** or **any order** sublists, the logic would be different (e.g., using sets or permutations).
+
+Let me know if you need a version that checks for non-contiguous or unordered sublists!

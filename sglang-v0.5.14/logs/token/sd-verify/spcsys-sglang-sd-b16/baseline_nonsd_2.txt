@@ -1,0 +1,47 @@
+Sure! A **triangular prism** is a 3D shape with two congruent triangular bases connected by three rectangular sides. The **volume** of a triangular prism can be calculated using the formula:
+
+$$
+\text{Volume} = \text{Base Area} \times \text{Height}
+$$
+
+Where:
+- **Base Area** is the area of the triangular base, calculated as:
+  $$
+  \text{Base Area} = \frac{1}{2} \times \text{base} \times \text{height}
+  $$
+- **Height** is the distance between the two triangular bases (also called the length of the prism).
+
+Here's a Python function to compute the volume of a triangular prism:
+
+```python
+def volume_of_triangular_prism(base, height_of_triangle, length_of_prism):
+    """
+    Calculate the volume of a triangular prism.
+
+    Parameters:
+    base (float): The base length of the triangular face.
+    height_of_triangle (float): The height of the triangular face.
+    length_of_prism (float): The length of the prism (distance between the two triangular bases).
+
+    Returns:
+    float: The volume of the triangular prism.
+    """
+    base_area = 0.5 * base * height_of_triangle
+    volume = base_area * length_of_prism
+    return volume
+```
+
+### Example usage:
+
+```python
+# Example: base = 5, height_of_triangle = 3, length_of_prism = 10
+vol = volume_of_triangular_prism(5, 3, 10)
+print("Volume of the triangular prism:", vol)
+```
+
+### Output:
+```
+Volume of the triangular prism: 75.0
+```
+
+Let me know if you'd like a version that takes input from the user or handles different types of triangles!

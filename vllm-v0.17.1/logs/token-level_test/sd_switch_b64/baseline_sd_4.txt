@@ -1,0 +1,31 @@
+Here's a Python function that calculates the perimeter of a square given its side length:
+
+```python
+def square_perimeter(side_length):
+    """
+    Returns the perimeter of a square given its side length.
+    
+    Parameters:
+    side_length (int or float): The length of one side of the square.
+    
+    Returns:
+    int or float: The perimeter of the square.
+    """
+    return 4 * side_length
+```
+
+### Example Usage:
+```python
+print(square_perimeter(10))  # Output: 40
+print(square_perimeter(5))   # Output: 20
+print(square_perimeter(4))   # Output: 16
+```
+
+### Test Cases:
+```python
+assert square_perimeter(10) == 40
+assert square_perimeter(5) == 20
+assert square_perimeter(4) == 16
+```
+
+This function multiplies the side length by 4, as the perimeter of a square is `4 * side_length`.

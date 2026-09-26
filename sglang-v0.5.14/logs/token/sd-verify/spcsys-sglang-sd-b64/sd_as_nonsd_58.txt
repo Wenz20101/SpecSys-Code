@@ -1,0 +1,42 @@
+Here's a Python function that checks whether **all** dictionaries in a list are empty:
+
+```python
+def are_all_dicts_empty(dict_list):
+    """
+    Check if all dictionaries in the given list are empty.
+
+    Parameters:
+    dict_list (list): A list of dictionaries.
+
+    Returns:
+    bool: True if all dictionaries are empty, False otherwise.
+    """
+    for d in dict_list:
+        if not isinstance(d, dict):
+            raise TypeError("All elements in the list must be dictionaries.")
+        if d:
+            return False
+    return True
+```
+
+### Example usage:
+
+```python
+# Test case 1: All empty dicts
+print(are_all_dicts_empty([{}, {}, {}]))  # Output: True
+
+# Test case 2: One non-empty dict
+print(are_all_dicts_empty([{}, {'a': 1}, {}]))  # Output: False
+
+# Test case 3: List with non-dictionary elements
+try:
+    print(are_all_dicts_empty([{}, [], {}]))
+except TypeError as e:
+    print(e)  # Output: All elements in the list must be dictionaries.
+```
+
+### Notes:
+- The function checks if each item in the list is a dictionary.
+- It returns `True` only if **all** dictionaries are empty.
+- If any dictionary is not empty, it returns `False`.
+- If the list contains non-dictionary elements, it raises a `TypeError`.

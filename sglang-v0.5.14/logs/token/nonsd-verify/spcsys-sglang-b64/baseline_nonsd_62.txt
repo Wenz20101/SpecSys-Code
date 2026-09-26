@@ -1,0 +1,54 @@
+To find the element that appears **only once** in a **sorted array**, where all other elements appear **exactly twice**, you can use a **binary search** approach for **O(log n)** time complexity.
+
+### Key Observations:
+- The array is **sorted**.
+- All elements **except one** appear **exactly twice**.
+- The **single element** will be the one that breaks the pattern of pairs.
+
+### Example:
+```python
+arr = [1, 1, 2, 2, 3, 3, 4, 5, 5]
+# Output: 4
+```
+
+### Binary Search Strategy:
+- In a sorted array with pairs, the **first element of a pair** is at an **even index**.
+- If the middle element is the **same as the next element**, then the single element is on the **right**.
+- If the middle element is the **same as the previous element**, then the single element is on the **left**.
+- If neither, then the middle element is the **single element**.
+
+---
+
+### ✅ Python Function:
+
+```python
+def find_single_element(arr):
+    left, right = 0, len(arr) - 1
+
+    while left < right:
+        mid = (left + right) // 2
+
+        # Check if mid is the single element
+        if arr[mid] != arr[mid ^ 1]:
+            right = mid
+        else:
+            left = mid + 1
+
+    return arr[left]
+```
+
+### 🔍 Explanation of `mid ^ 1`:
+- `mid ^ 1` is a trick to get the **other element of the pair**.
+  - If `mid` is even, `mid ^ 1` is `mid + 1`.
+  - If `mid` is odd, `mid ^ 1` is `mid - 1`.
+
+---
+
+### 🧪 Example Usage:
+
+```python
+arr = [1, 1, 2, 2, 3, 3, 4, 5, 5]
+print(find_single_element(arr))  # Output: 4
+```
+
+This function works efficiently even for large arrays.

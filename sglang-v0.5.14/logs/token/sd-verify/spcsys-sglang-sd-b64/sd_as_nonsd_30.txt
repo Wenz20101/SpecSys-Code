@@ -1,0 +1,36 @@
+Sure! Here's a Python function that calculates a single character based on the **sum of the ASCII values of all characters in a given string**, then takes that sum **modulo 26**, and finally maps it to a character in the **alphabet** (A-Z).
+
+### Assumptions:
+- The result is mapped to uppercase letters (A-Z).
+- If the result is 0, it maps to 'Z' (since 0 % 26 = 0, and we want to map 0 to 'Z', 1 to 'A', etc.)
+
+### Function:
+
+```python
+def char_from_ascii_sum(s):
+    # Calculate the sum of ASCII values of all characters in the string
+    total = sum(ord(char) for char in s)
+    
+    # Take modulo 26
+    mod_value = total % 26
+    
+    # Map 0 to 'Z', 1 to 'A', ..., 25 to 'Y'
+    result_char = chr(ord('A') + (mod_value - 1) % 26)
+    
+    return result_char
+```
+
+### Example Usage:
+
+```python
+print(char_from_ascii_sum("Hello"))  # Output: 'K'
+```
+
+### Explanation:
+- `"Hello"` has ASCII values: `H(72), e(101), l(108), l(108), o(111)` → sum = 72 + 101 + 108 + 108 + 111 = **500**
+- 500 % 26 = **20**
+- 20 → `'U'` (since `'A'` is 65, 65 + 20 = 85 → `'U'`)
+
+So, `char_from_ascii_sum("Hello")` returns `'U'`.
+
+Let me know if you want it to return lowercase letters or handle other cases!

@@ -1,0 +1,35 @@
+Here's a Python function that solves the MBPP task: sorting each sublist of strings in a given list of lists.
+
+```python
+def sort_sublists(list_of_lists):
+    """
+    Sorts each sublist of strings in a given list of lists.
+
+    Parameters:
+    list_of_lists (list of lists): A list containing sublists of strings.
+
+    Returns:
+    list of lists: A new list where each sublist is sorted alphabetically.
+    """
+    return [sorted(sublist) for sublist in list_of_lists]
+```
+
+### Explanation:
+- The function takes a list of lists (`list_of_lists`) as input.
+- It uses a list comprehension to iterate over each sublist.
+- For each sublist, it applies the `sorted()` function, which sorts the strings alphabetically.
+- The result is a new list of lists, where each sublist is sorted.
+
+### Example Usage:
+```python
+print(sort_sublists([["green", "orange"], ["black", "white"], ["white", "black", "orange"]]))
+# Output: [['green', 'orange'], ['black', 'white'], ['black', 'orange', 'white']]
+
+print(sort_sublists([[" red ", "green"], ["blue ", " black"], [" orange", "brown"]]))
+# Output: [[' red ', 'green'], [' black', 'blue '], [' orange', 'brown']]
+
+print(sort_sublists([["zilver", "gold"], ["magnesium", "aluminium"], ["steel", "bronze"]]))
+# Output: [['gold', 'zilver'], ['aluminium', 'magnesium'], ['bronze', 'steel']]
+```
+
+This function should pass all the provided test cases.

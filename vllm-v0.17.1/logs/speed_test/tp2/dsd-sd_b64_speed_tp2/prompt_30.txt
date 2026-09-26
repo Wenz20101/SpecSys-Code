@@ -1,0 +1,9 @@
+MBPP sample index: 30
+task_id: 83
+
+Task:
+Write a python function to find the character made by adding the ASCII value of all the characters of the given string modulo 26.
+
+Tests:
+['assert get_Char("abc") == "f"' 'assert get_Char("gfg") == "t"'
+ 'assert get_Char("ab") == "c"']

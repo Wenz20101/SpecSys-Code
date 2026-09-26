@@ -1,0 +1,4 @@
+sample_index: 18
+task_id: 67
+
+Write a function to find the number of ways to partition a set of Bell numbers.

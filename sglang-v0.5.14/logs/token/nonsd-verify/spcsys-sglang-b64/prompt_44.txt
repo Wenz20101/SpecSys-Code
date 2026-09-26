@@ -1,0 +1,4 @@
+sample_index: 44
+task_id: 97
+
+Write a function to find frequency of each element in a flattened list of lists, returned in a dictionary.

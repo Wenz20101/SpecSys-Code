@@ -1,0 +1,10 @@
+MBPP sample index: 113
+task_id: 244
+
+Task:
+Write a python function to find the next perfect square greater than a given number.
+
+Tests:
+['assert next_Perfect_Square(35) == 36'
+ 'assert next_Perfect_Square(6) == 9'
+ 'assert next_Perfect_Square(9) == 16']

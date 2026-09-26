@@ -1,0 +1,33 @@
+Sure! Here's a Python function that converts a **snake case** string to a **camel case** string:
+
+```python
+def snake_to_camel(snake_str):
+    """
+    Convert a snake case string to a camel case string.
+
+    Parameters:
+        snake_str (str): The input string in snake case.
+
+    Returns:
+        str: The converted string in camel case.
+    """
+    # Split the string by underscores
+    parts = snake_str.split('_')
+    
+    # Capitalize the first letter of each part except the first one
+    # and join them together
+    camel_str = parts[0] + ''.join(word.capitalize() for word in parts[1:])
+    
+    return camel_str
+```
+
+### Example usage:
+
+```python
+print(snake_to_camel("hello_world"))       # Output: helloWorld
+print(snake_to_camel("convert_this_string"))  # Output: convertThisString
+```
+
+### Notes:
+- This function assumes that the input is a valid snake case string (i.e., lowercase letters with underscores).
+- If the input is empty or has no underscores, it will still return the original string.

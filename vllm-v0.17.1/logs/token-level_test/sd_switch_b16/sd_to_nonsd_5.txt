@@ -1,0 +1,32 @@
+Here's a Python function that solves the MBPP task as described:
+
+### ✅ **Task Explanation:**
+You are given two strings:
+- The **first string** is the one from which characters will be removed.
+- The **second string** contains the characters to be removed from the first string.
+
+### ✅ **Function Definition:**
+
+```python
+def remove_dirty_chars(s1, s2):
+    # Create a set of characters to remove
+    chars_to_remove = set(s2)
+    # Use a list comprehension to filter out characters in s1 that are in chars_to_remove
+    result = ''.join([ch for ch in s1 if ch not in chars_to_remove])
+    return result
+```
+
+### ✅ **Test Cases:**
+
+```python
+assert remove_dirty_chars("probasscurve", "pros") == 'bacuve'
+assert remove_dirty_chars("digitalindia", "talent") == 'digiidi'
+assert remove_dirty_chars("exoticmiles", "toxic") == 'emles'
+```
+
+### ✅ **Explanation:**
+- `set(s2)` is used to make lookups faster (O(1) average time complexity).
+- The list comprehension filters out characters from `s1` that are in the `chars_to_remove` set.
+- `''.join(...)` is used to convert the filtered list of characters back into a string.
+
+Let me know if you'd like a version that preserves the order or handles Unicode characters differently!

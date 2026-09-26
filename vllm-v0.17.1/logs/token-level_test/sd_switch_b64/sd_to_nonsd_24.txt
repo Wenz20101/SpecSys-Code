@@ -1,0 +1,59 @@
+Here's a Python function that solves the MBPP task you've described. The goal is to check whether two lists (`words` and `patterns`) follow the same sequence of character repetitions.
+
+### ✅ **Function Explanation:**
+
+We want to check if the **pattern of repetition** in the `words` list matches the pattern in the `patterns` list.
+
+For example:
+- `["red", "green", "green"]` has the pattern: `["a", "b", "b"]` (i.e., first is unique, next two are the same).
+- `["red", "green", "greenn"]` has the pattern: `["a", "b", "c"]` (i.e., all are unique).
+
+So, the function will:
+1. Convert each word into a pattern based on the repetition of characters.
+2. Compare the generated pattern with the given `patterns` list.
+
+---
+
+### ✅ **Python Function:**
+
+```python
+def is_samepatterns(words, patterns):
+    def get_pattern(lst):
+        pattern = []
+        for word in lst:
+            seen = set()
+            current_pattern = []
+            for char in word:
+                if char in seen:
+                    current_pattern.append('b')  # 'b' for repeated
+                else:
+                    seen.add(char)
+                    current_pattern.append('a')  # 'a' for new
+            pattern.append(''.join(current_pattern))
+        return pattern
+
+    # Generate the pattern for the words
+    word_pattern = get_pattern(words)
+    
+    # Generate the pattern for the patterns list
+    pattern_pattern = get_pattern(patterns)
+
+    return word_pattern == pattern_pattern
+```
+
+---
+
+### ✅ **Test Cases:**
+
+```python
+assert is_samepatterns(["red","green","green"], ["a", "b", "b"]) == True
+assert is_samepatterns(["red","green","greenn"], ["a","b","b"]) == False
+assert is_samepatterns(["red","green","greenn"], ["a","b"]) == False
+```
+
+---
+
+### 🔍 **Explanation of the Pattern Conversion:**
+
+- For a word like `"red"`: `'r'` is new, `'e'` is new, `'d'` is new → pattern: `"aaa"`
+- For `"green"`: `'g'` is new, `'r'` is new, `'e'` is new, `'e'` is repeated, `'n'` is new → pattern

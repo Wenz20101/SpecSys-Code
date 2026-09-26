@@ -1,0 +1,9 @@
+MBPP sample index: 121
+task_id: 252
+
+Task:
+Write a python function to convert complex numbers to polar coordinates.
+
+Tests:
+['assert convert(1) == (1.0, 0.0)' 'assert convert(4) == (4.0,0.0)'
+ 'assert convert(5) == (5.0,0.0)']

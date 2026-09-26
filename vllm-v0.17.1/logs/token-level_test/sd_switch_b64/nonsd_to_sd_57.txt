@@ -1,0 +1,29 @@
+Here's a Python function that checks whether a given string represents an integer. It uses Python's built-in `str.isdigit()` method, but also handles negative integers by checking if the string starts with a minus sign followed by digits.
+
+```python
+def check_integer(s):
+    """
+    Check if a string represents an integer.
+
+    Parameters:
+    s (str): The string to check.
+
+    Returns:
+    bool: True if the string is an integer, False otherwise.
+    """
+    if s.startswith('-'):
+        return s[1:].isdigit()
+    return s.isdigit()
+
+# Test cases
+assert check_integer("python") == False
+assert check_integer("1") == True
+assert check_integer("12345") == True
+```
+
+### Explanation:
+- `s.isdigit()` checks if all characters in the string are digits.
+- If the string starts with a `'-'`, we check if the rest of the string is digits.
+- This function will return `False` for strings like `"123a"` or `"12.3"`, which are not valid integers.
+
+Let me know if you want it to also support strings like `"0"` or `"000123"` (which are still valid integers).

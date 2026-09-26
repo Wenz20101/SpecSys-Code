@@ -1,0 +1,34 @@
+Here's a Python function that checks whether two given integers have **opposite signs**:
+
+```python
+def opposite_Signs(a, b):
+    """
+    Check if two integers have opposite signs.
+    
+    Parameters:
+    a (int): First integer
+    b (int): Second integer
+    
+    Returns:
+    bool: True if the integers have opposite signs, False otherwise
+    """
+    return (a < 0) != (b < 0)
+```
+
+### Explanation:
+- The function uses a simple comparison: if one number is negative and the other is not, then they have opposite signs.
+- `(a < 0)` returns `True` if `a` is negative, `False` otherwise.
+- Similarly for `(b < 0)`.
+- The `!=` operator checks if the two boolean values are different, i.e., one is negative and the other is not.
+
+### Test Cases:
+You can run the following tests to verify the function:
+
+```python
+assert opposite_Signs(1, -2) == True
+assert opposite_Signs(3, 2) == False
+assert opposite_Signs(-10, -10) == False
+assert opposite_Signs(-2, 2) == True
+```
+
+All these tests should pass.

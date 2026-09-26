@@ -1,0 +1,26 @@
+Here's a Python function that converts a given decimal number to its binary equivalent as a string, with **no leading zeros**:
+
+```python
+def decimal_to_binary(n):
+    if n == 0:
+        return "0"
+    binary = ""
+    while n > 0:
+        binary = str(n % 2) + binary
+        n = n // 2
+    return binary
+```
+
+### Example usage:
+
+```python
+print(decimal_to_binary(10))   # Output: "1010"
+print(decimal_to_binary(0))    # Output: "0"
+print(decimal_to_binary(1))    # Output: "1"
+print(decimal_to_binary(255))  # Output: "11111111"
+```
+
+### Explanation:
+- The function handles the special case where the input is `0` and returns `"0"`.
+- For other numbers, it repeatedly divides the number by 2 and builds the binary string from the least significant bit to the most significant bit.
+- This ensures that there are **no leading zeros** in the output.

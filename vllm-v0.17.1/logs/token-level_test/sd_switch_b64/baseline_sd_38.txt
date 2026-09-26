@@ -1,0 +1,32 @@
+Here's a Python function that checks if a given string is present as a **substring** in **any** of the strings in a list:
+
+```python
+def find_substring(string_list, substring):
+    """
+    Check if the given substring is present in any of the strings in the list.
+
+    Parameters:
+    string_list (list): A list of strings to search in.
+    substring (str): The substring to search for.
+
+    Returns:
+    bool: True if the substring is found in any of the strings, False otherwise.
+    """
+    return any(substring in s for s in string_list)
+```
+
+### Example Usage:
+
+```python
+# Test cases
+assert find_substring(["red", "black", "white", "green", "orange"], "ack") == True
+assert find_substring(["red", "black", "white", "green", "orange"], "abc") == False
+assert find_substring(["red", "black", "white", "green", "orange"], "ange") == True
+```
+
+### Explanation:
+- The function uses a generator expression inside the `any()` function.
+- `substring in s` checks if `substring` is a substring of `s`.
+- `any(...)` returns `True` as soon as one of the checks is `True`.
+
+This function is efficient and concise for the given task.

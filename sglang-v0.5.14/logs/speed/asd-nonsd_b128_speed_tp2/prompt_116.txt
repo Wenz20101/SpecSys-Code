@@ -1,0 +1,9 @@
+MBPP sample index: 116
+task_id: 247
+
+Task:
+Write a function to find the length of the longest palindromic subsequence in the given string.
+
+Tests:
+['assert lps("TENS FOR TENS") == 5' 'assert lps("CARDIO FOR CARDS") == 7'
+ 'assert lps("PART OF THE JOURNEY IS PART") == 9']

@@ -1,0 +1,4 @@
+sample_index: 21
+task_id: 70
+
+Write a function to find whether all the given tuples have equal length or not.

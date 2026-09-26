@@ -1,0 +1,45 @@
+Here's a Python function that takes a **flattened list of lists** and returns a **dictionary** with the **frequency of each element**:
+
+```python
+from collections import defaultdict
+
+def count_element_frequencies(nested_list):
+    """
+    Flattens a list of lists and returns a dictionary with the frequency of each element.
+
+    Parameters:
+    nested_list (list of lists): The input list containing sublists.
+
+    Returns:
+    dict: A dictionary where keys are elements and values are their frequencies.
+    """
+    frequency = defaultdict(int)
+    
+    # Flatten the nested list
+    for sublist in nested_list:
+        for item in sublist:
+            frequency[item] += 1
+    
+    # Convert defaultdict to a regular dict for the output
+    return dict(frequency)
+```
+
+### Example Usage:
+
+```python
+data = [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
+result = count_element_frequencies(data)
+print(result)
+```
+
+### Output:
+
+```python
+{1: 1, 2: 2, 3: 3, 4: 2, 5: 1}
+```
+
+### Notes:
+- This function uses `collections.defaultdict` to simplify counting.
+- If you want to use only standard libraries and not `collections`, you can replace `defaultdict(int)` with a regular dictionary and check for existence.
+
+Let me know if you want a version without using `collections`.

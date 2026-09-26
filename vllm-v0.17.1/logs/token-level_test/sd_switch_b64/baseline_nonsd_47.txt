@@ -1,0 +1,35 @@
+Here's a Python function that finds the **next smallest palindrome** of a given integer. The function works by incrementing the number until it finds the next palindrome.
+
+```python
+def is_palindrome(n):
+    return str(n) == str(n)[::-1]
+
+def next_smallest_palindrome(n):
+    if n <= 0:
+        return 1  # smallest positive palindrome
+    next_num = n + 1
+    while True:
+        if is_palindrome(next_num):
+            return next_num
+        next_num += 1
+```
+
+### Explanation:
+- `is_palindrome(n)` checks if a number is a palindrome by comparing the string with its reverse.
+- `next_smallest_palindrome(n)` starts from `n + 1` and checks each number in order until it finds the next palindrome.
+
+### Example usage:
+```python
+print(next_smallest_palindrome(99))    # Output: 101
+print(next_smallest_palindrome(1221))  # Output: 1331
+print(next_smallest_palindrome(120))   # Output: 121
+```
+
+### Test cases:
+```python
+assert next_smallest_palindrome(99) == 101
+assert next_smallest_palindrome(1221) == 1331
+assert next_smallest_palindrome(120) == 121
+```
+
+This function is simple and works well for small to moderately large integers. For very large numbers, a more optimized approach could be used, but for the scope of the MBPP task, this is sufficient.

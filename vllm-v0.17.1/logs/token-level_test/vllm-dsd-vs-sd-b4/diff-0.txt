@@ -1,0 +1,11 @@
+--- /home/user/vllm/logs/vllm-dsd-vs-sd-b4/baseline_nonsd_0.txt	2026-07-30 12:50:38.899076438 +0800
++++ /home/user/vllm/logs/vllm-dsd-vs-sd-b4/sd_as_nonsd_0.txt	2026-07-30 12:50:51.647076745 +0800
+@@ -11,7 +11,7 @@
+         return s
+ 
+     # Remove the first and last occurrence
+-    # We need to make sure that first and last are not the same (i.e., only one occurrence)
++    # We need to make sure first and last are not the same (i.e., only one occurrence)
+     if first == last:
+         # Only one occurrence, remove it once
+         return s[:first] + s[first+1:]

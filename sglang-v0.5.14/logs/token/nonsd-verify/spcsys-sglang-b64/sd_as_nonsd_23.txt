@@ -1,0 +1,42 @@
+To determine whether a given number can be represented as the **difference of two squares**, we can use the following mathematical insight:
+
+A number $ n $ can be written as the **difference of two squares** if and only if it is **not congruent to 2 modulo 4**. In other words:
+
+$$
+n = a^2 - b^2 = (a - b)(a + b)
+$$
+
+This implies that $ n $ must be expressible as the product of two integers of the same parity (both even or both odd). This is only possible if $ n $ is **not of the form $ 4k + 2 $**.
+
+### Python Function:
+
+```python
+def can_be_difference_of_squares(n):
+    """
+    Check if a number can be represented as the difference of two squares.
+    
+    Parameters:
+    n (int): The number to check.
+    
+    Returns:
+    bool: True if n can be expressed as a^2 - b^2, False otherwise.
+    """
+    return n % 4 != 2
+```
+
+### Example Usage:
+
+```python
+print(can_be_difference_of_squares(15))  # True (e.g., 8^2 - 7^2 = 15)
+print(can_be_difference_of_squares(2))   # False
+print(can_be_difference_of_squares(3))   # True (e.g., 2^2 - 1^2 = 3)
+print(can_be_difference_of_squares(4))   # True (e.g., 2^2 - 0^2 = 4)
+print(can_be_difference_of_squares(6))   # False
+```
+
+### Explanation:
+
+- If `n % 4 == 2`, it **cannot** be written as the difference of two squares.
+- Otherwise, it **can** be written as such.
+
+Let me know if you'd like a version that also returns the actual pair of squares!

@@ -1,0 +1,38 @@
+Here's a Python function to determine whether a given number is **undulating** or not.
+
+### What is an undulating number?
+An undulating number is a number that follows the pattern `ababab...` or `bababa...`, where `a` and `b` are distinct digits. For example:
+- `1212121` is undulating (`1212121`)
+- `121` is undulating (`121`)
+- `1991` is **not** undulating because it has repeated digits (`99`)
+
+### Function Definition
+
+```python
+def is_undulating(n):
+    n = str(n)
+    if len(n) < 3:
+        return True  # Single-digit or two-digit numbers are trivially undulating
+
+    # Check if the number alternates between two different digits
+    for i in range(2, len(n)):
+        if n[i] != n[i - 2]:
+            return False
+    return True
+```
+
+### Explanation:
+- Convert the number to a string to easily access individual digits.
+- If the number has fewer than 3 digits, it's considered undulating (e.g., `12` or `1`).
+- For numbers with 3 or more digits, check if every digit alternates with the one two positions before it.
+- If any digit breaks the pattern, return `False`.
+
+### Test Cases
+
+```python
+assert is_undulating(1212121) == True
+assert is_undulating(1991) == False
+assert is_undulating(121) == True
+```
+
+These tests should all pass with the above function.
